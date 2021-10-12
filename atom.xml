@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-12T08:49:57.631Z</updated>
+  <updated>2021-10-12T09:50:46.874Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>致远OA ajax.do文件上传改进版</title>
+    <link href="https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/"/>
+    <id>https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/</id>
+    <published>2021-10-12T08:55:24.000Z</published>
+    <updated>2021-10-12T09:50:46.874Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="信息安全" scheme="https://1uckyun.github.io/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
+    
+    
+    <category term="致远OA" scheme="https://1uckyun.github.io/tags/%E8%87%B4%E8%BF%9COA/"/>
+    
+    <category term="文件上传" scheme="https://1uckyun.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Apache HTTPD 路径穿越漏洞 CVE-2021-42013</title>
     <link href="https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/"/>
     <id>https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/</id>
     <published>2021-10-12T07:16:07.000Z</published>
-    <updated>2021-10-12T08:49:57.631Z</updated>
+    <updated>2021-10-12T09:50:13.213Z</updated>
     
     
       

