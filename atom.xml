@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title></title>
+  <title>Lucky</title>
   
-  <subtitle>1uckyun&#39;s Blog</subtitle>
+  <subtitle>Lucky&#39;s Blog</subtitle>
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://1uckyun.github.io/</id>
   
   <author>
-    <name>1uckyun</name>
+    <name>lucky</name>
     
   </author>
   
