@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Lucky</title>
+  <title>Lucky&#39;s Blog</title>
   
-  <subtitle>Lucky&#39;s Blog</subtitle>
+  <subtitle>今日事，今日毕！</subtitle>
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-13T02:10:24.159Z</updated>
+  <updated>2021-10-13T03:27:27.337Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/"/>
     <id>https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/</id>
     <published>2021-10-12T08:55:24.000Z</published>
-    <updated>2021-10-13T02:10:24.159Z</updated>
+    <updated>2021-10-13T03:27:27.337Z</updated>
     
     
     <summary type="html">暂不公开。</summary>
@@ -42,7 +42,7 @@
     <link href="https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/"/>
     <id>https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/</id>
     <published>2021-10-12T07:16:07.000Z</published>
-    <updated>2021-10-12T09:50:13.213Z</updated>
+    <updated>2021-10-13T03:27:14.834Z</updated>
     
     
       
