@@ -39,10 +39,40 @@
   
   <entry>
     <title>Apache HTTPD 路径穿越漏洞 CVE-2021-42013</title>
-    <link href="https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/"/>
-    <id>https://1uckyun.github.io/2021/10/12/apache-httpd-lu-jing-chuan-yue-lou-dong/</id>
+    <link href="https://1uckyun.github.io/2021/10/12/apache-httpd-cve2021-42013/"/>
+    <id>https://1uckyun.github.io/2021/10/12/apache-httpd-cve2021-42013/</id>
     <published>2021-10-12T07:16:07.000Z</published>
-    <updated>2021-10-13T06:49:30.671Z</updated>
+    <updated>2021-10-13T07:50:28.246Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="Apache" scheme="https://1uckyun.github.io/tags/Apache/"/>
+    
+    <category term="路径穿越" scheme="https://1uckyun.github.io/tags/%E8%B7%AF%E5%BE%84%E7%A9%BF%E8%B6%8A/"/>
+    
+    <category term="RCE" scheme="https://1uckyun.github.io/tags/RCE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apache HTTPD 路径穿越漏洞 CVE2021-41773</title>
+    <link href="https://1uckyun.github.io/2021/10/11/apache-httpd-cve2021-41773/"/>
+    <id>https://1uckyun.github.io/2021/10/11/apache-httpd-cve2021-41773/</id>
+    <published>2021-10-11T07:39:04.000Z</published>
+    <updated>2021-10-13T08:03:08.575Z</updated>
     
     
       
