@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-15T02:01:42.931Z</updated>
+  <updated>2021-10-15T02:30:15.260Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://1uckyun.github.io/2021/10/15/jetty-min-gan-xin-xi-xie-lu/"/>
     <id>https://1uckyun.github.io/2021/10/15/jetty-min-gan-xin-xi-xie-lu/</id>
     <published>2021-10-15T01:20:49.000Z</published>
-    <updated>2021-10-15T02:01:42.931Z</updated>
+    <updated>2021-10-15T02:30:15.260Z</updated>
     
     
       
@@ -38,7 +38,9 @@
     <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
     
     
-    <category term="Jetty 敏感信息泄露" scheme="https://1uckyun.github.io/tags/Jetty-%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
+    <category term="Jetty" scheme="https://1uckyun.github.io/tags/Jetty/"/>
+    
+    <category term="敏感信息泄露" scheme="https://1uckyun.github.io/tags/%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   
@@ -128,7 +130,7 @@
     <link href="https://1uckyun.github.io/2021/10/11/apache-httpd-cve2021-41773/"/>
     <id>https://1uckyun.github.io/2021/10/11/apache-httpd-cve2021-41773/</id>
     <published>2021-10-11T07:39:04.000Z</published>
-    <updated>2021-10-14T06:42:21.577Z</updated>
+    <updated>2021-10-15T02:30:43.434Z</updated>
     
     
       
