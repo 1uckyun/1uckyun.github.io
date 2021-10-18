@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>泛微E-Cology WorkflowServiceXml RCE</title>
+      <link href="/2021/10/18/fan-wei-oa-soap-rce/"/>
+      <url>/2021/10/18/fan-wei-oa-soap-rce/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RCE </tag>
+            
+            <tag> 泛微OA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Jetty 敏感信息泄露</title>
       <link href="/2021/10/15/jetty-min-gan-xin-xi-xie-lu/"/>
       <url>/2021/10/15/jetty-min-gan-xin-xi-xie-lu/</url>
