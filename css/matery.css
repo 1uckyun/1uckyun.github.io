@@ -597,6 +597,7 @@ header .go-back i {
     margin: 0 auto;
     font-size: 2.5rem;
     font-weight: 400;
+    color: #3cb985;
 }
 
 @-webkit-keyframes rainbow {
