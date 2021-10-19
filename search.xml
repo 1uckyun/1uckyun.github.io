@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用友NC servlet.FileReceiveServlet 任意文件上传</title>
+      <link href="/2021/10/19/yong-you-nc-servlet-filereceiveservlet-ren-yi-wen-jian-shang-chuan/"/>
+      <url>/2021/10/19/yong-you-nc-servlet-filereceiveservlet-ren-yi-wen-jian-shang-chuan/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 用友NC </tag>
+            
+            <tag> 任意文件上传 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>泛微E-Cology WorkflowServiceXml RCE</title>
       <link href="/2021/10/18/fan-wei-oa-soap-rce/"/>
       <url>/2021/10/18/fan-wei-oa-soap-rce/</url>
@@ -95,9 +120,9 @@
       
         <tags>
             
-            <tag> 致远OA </tag>
+            <tag> 任意文件上传 </tag>
             
-            <tag> 文件上传 </tag>
+            <tag> 致远OA </tag>
             
         </tags>
       
