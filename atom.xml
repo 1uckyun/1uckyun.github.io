@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-20T00:34:10.255Z</updated>
+  <updated>2021-10-20T01:41:48.047Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用友NC servlet/~ic/bsh.servlet.BshServlet RCE</title>
+    <link href="https://1uckyun.github.io/2021/10/20/yong-you-nc-servlet-ic-bsh-servlet-bshservlet-rce/"/>
+    <id>https://1uckyun.github.io/2021/10/20/yong-you-nc-servlet-ic-bsh-servlet-bshservlet-rce/</id>
+    <published>2021-10-20T01:09:34.000Z</published>
+    <updated>2021-10-20T01:41:48.047Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="RCE" scheme="https://1uckyun.github.io/tags/RCE/"/>
+    
+    <category term="用友NC" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8BNC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用友NCCloud 目录遍历</title>
+    <link href="https://1uckyun.github.io/2021/10/20/yong-you-nccloud-mu-lu-bian-li/"/>
+    <id>https://1uckyun.github.io/2021/10/20/yong-you-nccloud-mu-lu-bian-li/</id>
+    <published>2021-10-20T00:55:04.000Z</published>
+    <updated>2021-10-20T01:36:21.607Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="用友NC" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8BNC/"/>
+    
+    <category term="目录遍历" scheme="https://1uckyun.github.io/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>某友系统登录绕过</title>
     <link href="https://1uckyun.github.io/2021/10/20/mou-you-xi-tong-deng-lu-rao-guo/"/>
     <id>https://1uckyun.github.io/2021/10/20/mou-you-xi-tong-deng-lu-rao-guo/</id>
     <published>2021-10-19T23:59:39.000Z</published>
-    <updated>2021-10-20T00:34:10.255Z</updated>
+    <updated>2021-10-20T01:01:11.191Z</updated>
     
     
     <summary type="html">暂不公开。</summary>
@@ -40,7 +96,7 @@
     <link href="https://1uckyun.github.io/2021/10/19/yong-you-nc-servlet-filereceiveservlet-ren-yi-wen-jian-shang-chuan/"/>
     <id>https://1uckyun.github.io/2021/10/19/yong-you-nc-servlet-filereceiveservlet-ren-yi-wen-jian-shang-chuan/</id>
     <published>2021-10-19T07:25:54.000Z</published>
-    <updated>2021-10-19T09:00:52.642Z</updated>
+    <updated>2021-10-20T01:01:14.905Z</updated>
     
     
       
@@ -68,7 +124,7 @@
     <link href="https://1uckyun.github.io/2021/10/18/fan-wei-oa-soap-rce/"/>
     <id>https://1uckyun.github.io/2021/10/18/fan-wei-oa-soap-rce/</id>
     <published>2021-10-18T01:13:02.000Z</published>
-    <updated>2021-10-18T01:20:41.960Z</updated>
+    <updated>2021-10-20T01:00:39.366Z</updated>
     
     
       
@@ -154,7 +210,7 @@
     <link href="https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/"/>
     <id>https://1uckyun.github.io/2021/10/12/zhi-yuan-oa-ajax-do-wen-jian-shang-chuan-gai-jin-ban/</id>
     <published>2021-10-12T08:55:24.000Z</published>
-    <updated>2021-10-19T07:26:42.533Z</updated>
+    <updated>2021-10-20T01:01:32.784Z</updated>
     
     
     <summary type="html">暂不公开。</summary>
