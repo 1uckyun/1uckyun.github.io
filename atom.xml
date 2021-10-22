@@ -73,11 +73,11 @@
   </entry>
   
   <entry>
-    <title>某友系统登录绕过</title>
-    <link href="https://1uckyun.github.io/2021/10/20/mou-you-xi-tong-deng-lu-rao-guo/"/>
-    <id>https://1uckyun.github.io/2021/10/20/mou-you-xi-tong-deng-lu-rao-guo/</id>
+    <title>用友某管理系统登录绕过</title>
+    <link href="https://1uckyun.github.io/2021/10/20/yong-you-xi-tong-deng-lu-rao-guo/"/>
+    <id>https://1uckyun.github.io/2021/10/20/yong-you-xi-tong-deng-lu-rao-guo/</id>
     <published>2021-10-19T23:59:39.000Z</published>
-    <updated>2021-10-20T01:01:11.191Z</updated>
+    <updated>2021-10-22T06:46:31.081Z</updated>
     
     
     <summary type="html">暂不公开。</summary>
@@ -86,6 +86,8 @@
     
     <category term="信息安全" scheme="https://1uckyun.github.io/categories/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
     
+    
+    <category term="用友" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8B/"/>
     
     <category term="登录绕过" scheme="https://1uckyun.github.io/tags/%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87/"/>
     
