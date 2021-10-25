@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>记一次渗透测试</title>
+      <link href="/2021/10/25/ji-yi-ci-shen-tou-ce-shi/"/>
+      <url>/2021/10/25/ji-yi-ci-shen-tou-ce-shi/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 渗透测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 任意文件上传 </tag>
+            
+            <tag> 垂直越权 </tag>
+            
+            <tag> SQL注入 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>信息安全工程师</title>
       <link href="/2021/10/22/xin-xi-an-quan-gong-cheng-shi-ruan-kao/"/>
       <url>/2021/10/22/xin-xi-an-quan-gong-cheng-shi-ruan-kao/</url>

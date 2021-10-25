@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-22T09:57:42.067Z</updated>
+  <updated>2021-10-25T07:01:25.600Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次渗透测试</title>
+    <link href="https://1uckyun.github.io/2021/10/25/ji-yi-ci-shen-tou-ce-shi/"/>
+    <id>https://1uckyun.github.io/2021/10/25/ji-yi-ci-shen-tou-ce-shi/</id>
+    <published>2021-10-25T06:12:44.000Z</published>
+    <updated>2021-10-25T07:01:25.600Z</updated>
+    
+    
+    <summary type="html">暂不公开。</summary>
+    
+    
+    
+    <category term="渗透测试" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="任意文件上传" scheme="https://1uckyun.github.io/tags/%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+    <category term="垂直越权" scheme="https://1uckyun.github.io/tags/%E5%9E%82%E7%9B%B4%E8%B6%8A%E6%9D%83/"/>
+    
+    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>信息安全工程师</title>
