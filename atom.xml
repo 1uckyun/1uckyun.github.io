@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-25T07:19:27.965Z</updated>
+  <updated>2021-10-26T03:26:27.625Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>XSS基础</title>
+    <link href="https://1uckyun.github.io/2021/10/26/xss-ji-chu/"/>
+    <id>https://1uckyun.github.io/2021/10/26/xss-ji-chu/</id>
+    <published>2021-10-26T03:19:36.000Z</published>
+    <updated>2021-10-26T03:26:27.625Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="渗透测试" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="XSS" scheme="https://1uckyun.github.io/tags/XSS/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次授权渗透测试</title>

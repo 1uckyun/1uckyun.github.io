@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>XSS基础</title>
+      <link href="/2021/10/26/xss-ji-chu/"/>
+      <url>/2021/10/26/xss-ji-chu/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 渗透测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> XSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>记一次授权渗透测试</title>
       <link href="/2021/10/25/ji-yi-ci-shou-quan-shen-tou-ce-shi/"/>
       <url>/2021/10/25/ji-yi-ci-shou-quan-shen-tou-ce-shi/</url>
