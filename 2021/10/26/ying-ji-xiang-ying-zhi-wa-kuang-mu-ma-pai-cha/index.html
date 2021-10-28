@@ -411,7 +411,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    636
+                    648
                 </div>
                 
 
@@ -536,7 +536,7 @@ HKEY_LOCAL_MACHINE\SAM\SAM\Domains\account\Users\Names
 2、事件日志排查
 eventvwr.msc
 
-3、计划任务查看
+3、计划任务排查
 HKEY_CURRENT_USER\software\micorsoft\windows\currentversion\run 
 HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run 
 HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunOnce
@@ -544,7 +544,9 @@ gpedit.msc -&gt; windows设置 -&gt; 脚本
 
 4、异常端口排查
 netstat -ano 
-tasklist | findstr PID<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+tasklist | findstr PID
+
+5、安全软件隔离区和信任区<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
