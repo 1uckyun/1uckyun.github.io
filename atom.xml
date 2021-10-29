@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-10-29T02:11:07.984Z</updated>
+  <updated>2021-10-29T09:44:26.359Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MSSQL注入总结</title>
+    <link href="https://1uckyun.github.io/2021/10/29/mssql-zhu-ru-zong-jie/"/>
+    <id>https://1uckyun.github.io/2021/10/29/mssql-zhu-ru-zong-jie/</id>
+    <published>2021-10-29T07:04:09.000Z</published>
+    <updated>2021-10-29T09:44:26.359Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="渗透测试学习" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="SqlServer" scheme="https://1uckyun.github.io/tags/SqlServer/"/>
+    
+    <category term="MSSQL" scheme="https://1uckyun.github.io/tags/MSSQL/"/>
+    
+    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>应急响应之挖矿木马排查</title>
@@ -42,11 +72,11 @@
   </entry>
   
   <entry>
-    <title>XSS基础</title>
+    <title>XSS-POC总结</title>
     <link href="https://1uckyun.github.io/2021/10/26/xss-poc/"/>
     <id>https://1uckyun.github.io/2021/10/26/xss-poc/</id>
     <published>2021-10-26T03:19:36.000Z</published>
-    <updated>2021-10-29T02:09:46.708Z</updated>
+    <updated>2021-10-29T07:11:18.063Z</updated>
     
     
       
@@ -60,10 +90,10 @@
     
     
     
-    <category term="渗透测试" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    <category term="渗透测试学习" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="XSS-POC" scheme="https://1uckyun.github.io/tags/XSS-POC/"/>
+    <category term="XSS" scheme="https://1uckyun.github.io/tags/XSS/"/>
     
   </entry>
   
@@ -72,7 +102,7 @@
     <link href="https://1uckyun.github.io/2021/10/25/ji-yi-ci-shou-quan-shen-tou-ce-shi/"/>
     <id>https://1uckyun.github.io/2021/10/25/ji-yi-ci-shou-quan-shen-tou-ce-shi/</id>
     <published>2021-10-25T06:12:44.000Z</published>
-    <updated>2021-10-29T02:13:14.257Z</updated>
+    <updated>2021-10-29T06:35:31.914Z</updated>
     
     
     <summary type="html">暂不公开。</summary>
@@ -82,11 +112,11 @@
     <category term="渗透测试" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
     
     
-    <category term="垂直越权" scheme="https://1uckyun.github.io/tags/%E5%9E%82%E7%9B%B4%E8%B6%8A%E6%9D%83/"/>
-    
     <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
     <category term="任意文件上传" scheme="https://1uckyun.github.io/tags/%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    
+    <category term="垂直越权" scheme="https://1uckyun.github.io/tags/%E5%9E%82%E7%9B%B4%E8%B6%8A%E6%9D%83/"/>
     
   </entry>
   
