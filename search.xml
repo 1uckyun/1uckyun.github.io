@@ -28,8 +28,8 @@
     
     <entry>
       <title>XSS基础</title>
-      <link href="/2021/10/26/xss-ji-chu/"/>
-      <url>/2021/10/26/xss-ji-chu/</url>
+      <link href="/2021/10/26/xss-poc/"/>
+      <url>/2021/10/26/xss-poc/</url>
         <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
       
       <categories>
@@ -41,7 +41,7 @@
       
         <tags>
             
-            <tag> XSS </tag>
+            <tag> XSS-POC </tag>
             
         </tags>
       
@@ -64,11 +64,11 @@
       
         <tags>
             
-            <tag> 任意文件上传 </tag>
-            
             <tag> 垂直越权 </tag>
             
             <tag> SQL注入 </tag>
+            
+            <tag> 任意文件上传 </tag>
             
         </tags>
       
