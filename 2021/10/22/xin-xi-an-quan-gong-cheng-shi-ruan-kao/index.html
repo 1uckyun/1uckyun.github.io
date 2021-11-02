@@ -415,14 +415,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    351
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -448,28 +448,200 @@
 <p>仿射密码的<code>K（k1，k2）</code><br>加密函数：<code>C =（k1 * M + k2）mod 26</code><br>解密函数：<code>M =（C - k2）* [k1关于26的乘法逆元]</code><br></p>
 <p>已知两组对应的明/密文，求秘钥<br>例：已知明文<code>E</code>对应的密文为<code>C</code>，明文<code>T</code>对应的密文为<code>F</code>，求秘钥K（k1，k2）<br><code>（k1*4 + k2）mod 26 = 2</code>           （1）<br><code>（k1*19 + k2）mod 26 = 5</code>         （2）</p>
 <p>（2）-（1）得：<code>k1*15 mod 26 = 3</code>，由此可知k1=21，代入k1，求k2位22</p>
-<h2 id="二、错题记录"><a href="#二、错题记录" class="headerlink" title="二、错题记录"></a>二、错题记录</h2><ul>
-<li><p>SDLC（软件过程开发模型）安全开发模型</p>
-<p>1、使用批准工具，编写安全代码</p>
-<p>2、禁用不安全函数</p>
-<p>3、静态分析，检测程序指针的完整性</p>
+<h3 id="3、Vernam密码"><a href="#3、Vernam密码" class="headerlink" title="3、Vernam密码"></a>3、Vernam密码</h3><p>例：明文为：<code>1000100 1000001</code>，秘钥为：<code>101100 1000001</code></p>
+<p>密文 = <code>1000100 1000001</code> 异或 <code>101100 1000001</code> = <code>0001000 0000000</code></p>
+<h2 id="二、基础知识"><a href="#二、基础知识" class="headerlink" title="二、基础知识"></a>二、基础知识</h2><h3 id="1、选择题"><a href="#1、选择题" class="headerlink" title="1、选择题"></a>1、选择题</h3><p>（1）<font color="red"><strong>网关体系</strong></font>：协议、表示、安全、对象</p>
+<p>（2）<font color="red"><strong>ISO安全体系结构</strong></font>：机密性、完整性、不可抵赖、访问控制、鉴别服务</p>
+<p>（3）<font color="red"><strong>信息安全风险评估需要识别的对象</strong></font>：资产识别、威胁识别、脆弱性识别、控制措施</p>
+<p>（4）<font color="red"><strong>风险评估四个阶段</strong></font>：风险评估准备、风险因素识别、风险程度分析、风险等级评价</p>
+<p>（5）<font color="red"><strong>规范和惩罚信息网络犯罪的法律</strong></font>：《中华人民共和国刑法》</p>
+<p>（6）<font color="red"><strong>计算机取证</strong></font>：为保证调查工具的完整性，需要对工具进行MD5等校验处理</p>
+<p>（7）<font color="red"><strong>等保题</strong></font>：</p>
+<ul>
+<li>军用不对外公开信息系统，至少应属于3级或3级以上</li>
+<li>涉密信息系统，不低于4级</li>
+</ul>
+<p>（8）<font color="red"><strong>等保题</strong></font>：对所有主题和客体进行自主强制访问控制的是 结构化保护级</p>
+<p>（9）<font color="red"><strong>选择密文攻击</strong></font>：对攻击者最有利，主要攻击公钥密码体制，特别是数字签名</p>
+<p>（10）<font color="red"><strong>分组密码的工作模式</strong></font>：</p>
+<ul>
+<li><p><strong>ECB（Electronic Codebook, 电码本）</strong></p>
+<p>最简单的加密模式，明文消息被分成固定大小的块（分组），每个块使用相同的方法进行加密，可以并行计算。</p>
+<p>一旦有一个块被破解，使用相同的方法可以解密所有的明文数据，安全性比较差。</p>
+<p>适用于数据较少的情形，加密前需要把明文数据填充到块大小的整倍数。</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/20211102094858.png" alt="ECB加密流程"><br></p>
 </li>
-<li><p>隐私保护技术（从数据挖掘的角度）</p>
-<p>1、基于数据失真的隐私保护技术</p>
-<p>2、基于数据加密隐私保护技术</p>
-<p>3、基于数据匿名隐私保护技术</p>
+<li><p><strong>CBC（Cipher Block Chaining, 密码分组连接模式）</strong></p>
+<p>加密算法的输入是当前明文分组和前一次密文分组的异或</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/20211102095552.png" alt="CBC加密流程"></p>
+<br></li>
+<li><p><strong>PCBC（明密文分组链接）</strong></p>
+<p>加密算法与CBC类似，输入是当前明文分组和前一次密文分组和明文分组异或后的异或</p>
+<p>加解密具有错误传播无界的特性</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://cdn.jsdelivr.net/gh/1uckyun/CDN/images/20211102100824.png" alt="PCBP加密流程"></p>
+<br></li>
+<li><p><strong>CFB（密码反馈模式）</strong></p>
+<p>前一个分组的密文加密后和当前分组的明文XOR异或操作生成当前分组的密文</p>
+<p>明文的改变会影响接下来所有的密文，因此加密过程不能并行化，但是解密过程是可以并行化的</p>
+<p>解密时，密文中一位数据的改变仅会影响两个明文块：对应平文块中的一位数据与下一块中全部的数据，而之后的数据将恢复正常</p>
 </li>
-<li><p>防火墙的体系结构</p>
-<p>1、双宿主主机</p>
-<p>2、被屏蔽主机</p>
-<p>3、被屏蔽子网</p>
-</li>
-<li><p>Snort（开源入侵检测系统）配置模式</p>
-<p>1、嗅探</p>
-<p>2、包记录</p>
-<p>3、网络入侵分析</p>
+<li><p><strong>OFB（输出反馈模式）</strong></p>
+<p>与CFB模式相似，但是不同点在于，OFB是将加密算法的输出反馈到移位寄存器，而CFB是将密文直接反馈到移位寄存器。</p>
+<p>在传输过程中，如果有某一bit的消息被更改或者发生错误时，不会影响其最后输出。</p>
 </li>
 </ul>
+<p>（11）<font color="red"><strong>CA的功能</strong></font>：证书的审批、颁发、备份。（不负责证书的加密）</p>
+<p>（12）<font color="red"><strong>计算机网络基础</strong></font>：IPv4数据包中，标识符字段最适合携带隐藏信息</p>
+<p>（13）<font color="red"><strong>DHCP</strong></font>：默认租约期8天，可以收到多个DHCPOFFER信息，选择最先到达的</p>
+<p>（14）<font color="red"><strong>Telnet</strong></font>：采用NVT（Net Virtual Terminal）格式实现数据传输</p>
+<p>（15）<font color="red"><strong>RIP（距离矢量路由协议）</strong></font>：基于UDP、520端口、30s（更新）、180s（路由不可达）、240s（删除路由）、RIPv1（基于广播）、RIPv2（基于组播）</p>
+<ul>
+<li><strong>水平分割</strong>：从某一接口学习的路由信息，不反向传回</li>
+<li><strong>路由中毒</strong>：将不可达网络的跳数设置为16</li>
+<li><strong>反向中毒</strong>：从某一接口学习到的条数为16的路由信息，应向同一接口返回一条路由不可达的信息</li>
+<li><strong>抑制定时器</strong>：一条路由信息失效后，一段时间内不接收失效路由目的地址的路由更新</li>
+<li><strong>触发更新</strong>：当路由表发生变化，立即更新报文，并广播到邻居路由器</li>
+</ul>
+<p>（16）<font color="red"><strong>3R生存策略</strong></font>：抵抗（Resistance）、识别（Recongnition）、恢复（Reconvery）</p>
+<p>（17）<font color="red"><strong>SSL</strong></font>：机密性、完整性、可认证。（不提供可用性）</p>
+<p>（18）<font color="red"><strong>网闸</strong></font>：代理+摆渡</p>
+<ul>
+<li><strong>代理</strong>：拆除数据包头包尾，只保留原始数据部分</li>
+<li><strong>摆渡</strong>：内外网进行隔离，分时对网闸中的存储进行读写</li>
+<li>涉密网络与非涉密网络互联，网闸隔离；非涉密网络与互联网进行连通时，单向网闸隔离；非涉密网络与互联网不连通时，双向网闸隔离</li>
+</ul>
+<p>（19）<font color="red"><strong>防火墙的体系结构</strong></font>：双重宿主主机、被屏蔽主机、被屏蔽子网</p>
+<p>（20）<font color="red"><strong>Snort配置模式</strong></font>：嗅探、包记录、网络入侵检测</p>
+<p>（21）<font color="red"><strong>IPSec</strong></font>：传输模式（适合PC-PC）、隧道模式（适合所有场景，新IP头）、AH（认证）、ESP（数据加密）</p>
+<p>（22）<font color="red"><strong>流量监控</strong></font>：基础：协议分析，主要方法：端口识别、DFI（深度流检测）、DPI（深度包检测）</p>
+<ul>
+<li><strong>DFI</strong>：主要组成部分：流特征选择、流特征提供、分类器</li>
+<li><strong>DPI</strong>：在分析包头的基础上，增加了对应用层的分析</li>
+</ul>
+<p>（23）<font color="red"><strong>无线网络安全</strong></font>：</p>
+<ul>
+<li><p><strong>我国无线局域网规定的算法</strong>：</p>
+<p>1、对称密码算法 SMS4（原SM4）</p>
+<p>2、签名算法 ECDSA</p>
+<p>3、秘钥协商算法 ECDH</p>
+<p>4、杂凑算法 SHA-256</p>
+<p>其中 ECDSA、ECDH 必须采用国家密码管理局规定的椭圆曲线和参数</p>
+</li>
+<li><p><strong>WAPI（无线局域网安全强制标准）</strong>：</p>
+<p>1、从应用模式上分为单点式、分布式</p>
+<p>2、采用双向加密认证技术</p>
+<p>4、秘钥管理方式有基于证书、基于预共享秘钥</p>
+</li>
+</ul>
+<p>（24）<font color="red"><strong>RADIUS（计费协议）</strong></font>：基于UDP、授权端口1812、计费端口1813</p>
+<p>（25）<font color="red"><strong>检错与纠错</strong></font>：</p>
+<ul>
+<li><strong>海明码</strong>：可以检错和纠错、码距大于等于3</li>
+<li><strong>CRC（循环冗余校验码）</strong>：只能检错，码距大于1</li>
+</ul>
+<p>（26）<font color="red"><strong>安全模型</strong></font>：</p>
+<ul>
+<li><strong>BLP模型（机密性模型）</strong>：简单安全特性（下读）、*特性（上写）</li>
+<li><strong>Biba模型（完整性模型）</strong>：</li>
+<li><strong>访问控制的基本要素</strong>：主体、客体、授权访问</li>
+</ul>
+<p>（27）<font color="red"><strong>加密文件系统</strong></font>：</p>
+<ul>
+<li><strong>Linux</strong>：CFS（只加密目录）、TCFS</li>
+<li><strong>Windows</strong>：AFS（目录访问控制，数据明文存储）、EFS（数据加密）</li>
+</ul>
+<p>（28）<font color="red"><strong>COS（Card OS）</strong></font>：通信管理模块、安全管理模块、应用管理模块、文件管理模块</p>
+<p>（29）<font color="red"><strong>安卓恶意软件类型</strong></font>：远控木马、话费吸取、隐私窃取、恶意推广</p>
+<p>（30）<font color="red"><strong>SET</strong></font>：基于消息流的协议</p>
+<p>（31）<font color="red"><strong>代码静态分析方法</strong></font>：模式匹配、定理证明、模型检测</p>
+<p>（32）<font color="red"><strong>入侵检测系统</strong></font>：体系结构：基于主机型、基于网络型、分布式入侵检测系统</p>
+<ul>
+<li><p><strong>异常检测</strong>：依赖于异常模型的建立（把用户正常的行为存储到特征库，若检测到与正常行为差异较大，则认为是异常）</p>
+<p>1、<strong>基于统计的异常检测</strong>：利用数学统计方法，发现异常</p>
+<p>2、<strong>基于模式预测的异常检测</strong>：归纳事件与时间的关系，发现异常</p>
+<p>3、<strong>基于文本分类的异常检测</strong>：利用 K-最近邻聚类 分析法，发现最迟</p>
+<p>4、<strong>基于贝叶斯推理的异常检测</strong>：通过分析测量任一时刻若干系统特征发现异常s</p>
+</li>
+<li><p><strong>误用检测</strong>：依赖于攻击模式库（有固定的攻击行为和明显的攻击特征）</p>
+</li>
+</ul>
+<p>（33）<font color="red"><strong>PKI（公钥基础设施）</strong></font>：机密性、完整性、真实性（不包括访问安全）</p>
+<p>（34）<font color="red"><strong>选择明文攻击</strong></font>：知道任何明文的密文</p>
+<p>（35）<font color="red"><strong>隔离技术</strong></font>：</p>
+<ul>
+<li>第一代：完全隔离</li>
+<li>第二代：硬件卡隔离</li>
+<li>第三代：数据转播隔离</li>
+<li>第四代：空气开关隔离</li>
+<li>第五代：完全通道隔离</li>
+</ul>
+<p>（36）<font color="red"><strong>IDC（数据中心）</strong></font>：耐火等级不低于2级</p>
+<ul>
+<li>R1，系统具备一定的冗余能力，可用性不小于99.5%</li>
+<li>R2，系统具备冗余能力，可用性不小于99.9%</li>
+<li>R3，系统具备容错能力，可用性不小于99.99%</li>
+</ul>
+<p>（37）<font color="red"><strong>灾难恢复能力等级</strong></font>：</p>
+<ul>
+<li>第一级：基本支持</li>
+<li>第二级：备用场地支持</li>
+<li>第三级：电子传输和部分设备支持</li>
+<li>第四级：电子传输和完整设备支持</li>
+<li>第五级：实时数据传输和完整设备支持</li>
+<li>第六级：数据0丢失和远程集群支持</li>
+</ul>
+<p>（38）<font color="red"><strong>密码学基础</strong></font>：</p>
+<ul>
+<li><p><strong>对称密码</strong>：</p>
+<p>1、DES，明文分组长度64位一组，秘钥64位（56位有效秘钥和8位奇偶校验），子秘钥48位</p>
+<p>2、IDEA，明/密文分组长度64位，秘钥128位</p>
+<p>3、AES，明文分组长度128、192、256位，秘钥长度128、192、256位</p>
+<p>4、SM1，分组长度和秘钥长度均为128位</p>
+<p>5、SM4，分组长度和秘钥长度均为128位</p>
+<p>6、RC4，秘钥长度可变，美国🇺🇸限制出口秘钥长度超过40位的RC4算法</p>
+<p>7、RC5，分组，秘钥长度可变</p>
+</li>
+<li><p><strong>非对称秘钥</strong>：</p>
+<p>1、RSA：1024位以上的秘钥，才认为是安全的</p>
+<p>2、椭圆曲线密码：160位的秘钥相当于1024位RSA的安全性，二代居民身份证使用256位的椭圆曲线密码</p>
+<p>3、SM2：国家密码管理局颁发的椭圆曲线公钥密码算法</p>
+</li>
+<li><p><strong>哈希算法</strong>：</p>
+<p>1、MD5：消息分组512位，128位摘要</p>
+<p>2、SHA-1：小于2的64次方为消息，160位摘要</p>
+<p>3、SM3：小于2的64次方为消息，256位摘要</p>
+</li>
+</ul>
+<p>（39）<font color="red"><strong>HASH函数特性</strong></font>：</p>
+<p>​      1、单向性：已知x，求x = h(m) 的 m，在计算上是不可行的</p>
+<p>​      2、弱抗碰撞性：对于任意给定的消息m1，如果找到另一消息m2，使得 h(m1) = h(m2) ，在计算上是不可行的</p>
+<p>​      3、强抗碰撞性：寻找2个不同的消息m1 和 m2，使得 h(m1) = h(m2) ，在计算上是不可行的</p>
+<p>（40）<font color="red">****</font>：</p>
+<h3 id="2、简答题"><a href="#2、简答题" class="headerlink" title="2、简答题"></a>2、简答题</h3><p>（1）<font color="red"><strong>密码学</strong></font>：</p>
+<ul>
+<li><p><strong>安全目标：CIA</strong></p>
+<p>1、保密性，保护信息被合法用户访问，不泄露给非授权用户</p>
+<p>2、完整性，所有资源只能由授权用户进行修改</p>
+<p>3、可用性，授权用户可以通过授权进行合法访问</p>
+</li>
+<li><p><strong>秘钥管理技术</strong>：秘钥的产生、分配、存储、使用、更换、停用、销毁</p>
+</li>
+<li><p>机密性，对于公开的信息，不适用</p>
+</li>
+</ul>
+<p>（1）<font color="red"><strong>安全工具配置</strong></font>：</p>
+<ul>
+<li><p><strong>防火墙的体系结构及作用</strong>：</p>
+<p>1、双重宿主主机：由一台双重宿主主机作为防火墙系统主体，隔离内部网络与外部网络</p>
+<p>2、被屏蔽主机：由一台路由器和内部网络上的堡垒机构成防火墙，隔离内部网络与外部网络</p>
+<p>3、被屏蔽子网：由两台路由器包围起来的周边网络，堡垒机也在这个周边网络中，隔离内部网络与外部网络</p>
+</li>
+</ul>
+<p>（1）<font color="red">****</font>：</p>
+<p>（1）<font color="red">****</font>：</p>
+<p>（1）<font color="red">****</font>：</p>
+<p>（1）<font color="red">****</font>：</p>
+<p>（1）<font color="red">****</font>：</p>
 
                 
             </div>
@@ -1155,7 +1327,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">16.7k</span>
+                        class="white-color">19.3k</span>
             
             
             
