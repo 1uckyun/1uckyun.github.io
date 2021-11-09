@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-11-03T06:33:22.700Z</updated>
+  <updated>2021-11-09T07:08:15.258Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>天玥运维安全网关V6.0 SQL注入</title>
+    <link href="https://1uckyun.github.io/2021/11/09/tian-yue-yun-wei-an-quan-wang-guan-v6-0-sql-zhu-ru/"/>
+    <id>https://1uckyun.github.io/2021/11/09/tian-yue-yun-wei-an-quan-wang-guan-v6-0-sql-zhu-ru/</id>
+    <published>2021-11-09T06:26:35.000Z</published>
+    <updated>2021-11-09T07:08:15.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="安全设备漏洞" scheme="https://1uckyun.github.io/tags/%E5%AE%89%E5%85%A8%E8%AE%BE%E5%A4%87%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>MSSQL注入总结</title>
@@ -257,7 +285,7 @@
     <link href="https://1uckyun.github.io/2021/10/18/fan-wei-oa-soap-rce/"/>
     <id>https://1uckyun.github.io/2021/10/18/fan-wei-oa-soap-rce/</id>
     <published>2021-10-18T01:13:02.000Z</published>
-    <updated>2021-10-20T01:00:39.366Z</updated>
+    <updated>2021-11-09T06:29:51.130Z</updated>
     
     
       

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>天玥运维安全网关V6.0 SQL注入</title>
+      <link href="/2021/11/09/tian-yue-yun-wei-an-quan-wang-guan-v6-0-sql-zhu-ru/"/>
+      <url>/2021/11/09/tian-yue-yun-wei-an-quan-wang-guan-v6-0-sql-zhu-ru/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL注入 </tag>
+            
+            <tag> 安全设备漏洞 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MSSQL注入总结</title>
       <link href="/2021/10/29/mssql-zhu-ru-zong-jie/"/>
       <url>/2021/10/29/mssql-zhu-ru-zong-jie/</url>
