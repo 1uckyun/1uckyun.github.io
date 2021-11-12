@@ -4,6 +4,83 @@
   
     
     <entry>
+      <title>蓝凌OA XMLDecoder反序列化 getshell</title>
+      <link href="/2021/11/12/lan-ling-oa-xmldecoder-fan-xu-lie-hua-getshell/"/>
+      <url>/2021/11/12/lan-ling-oa-xmldecoder-fan-xu-lie-hua-getshell/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> getshell </tag>
+            
+            <tag> 蓝凌OA </tag>
+            
+            <tag> XmlDecoder反序列化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>H3C IMC 命令执行</title>
+      <link href="/2021/11/12/h3c-imc-ming-ling-zhi-xing/"/>
+      <url>/2021/11/12/h3c-imc-ming-ling-zhi-xing/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RCE </tag>
+            
+            <tag> H3C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL注入总结</title>
+      <link href="/2021/11/10/mysql-zhu-ru-zong-jie/"/>
+      <url>/2021/11/10/mysql-zhu-ru-zong-jie/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 渗透测试学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SQL注入 </tag>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>天玥运维安全网关V6.0 SQL注入</title>
       <link href="/2021/11/09/tian-yue-yun-wei-an-quan-wang-guan-v6-0-sql-zhu-ru/"/>
       <url>/2021/11/09/tian-yue-yun-wei-an-quan-wang-guan-v6-0-sql-zhu-ru/</url>
