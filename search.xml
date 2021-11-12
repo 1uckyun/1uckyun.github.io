@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>致远OA Fastjson RCE</title>
+      <link href="/2021/11/12/zhi-yuan-oa-fastjson-rce/"/>
+      <url>/2021/11/12/zhi-yuan-oa-fastjson-rce/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RCE </tag>
+            
+            <tag> 致远OA </tag>
+            
+            <tag> Fastjson反序列化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>蓝凌OA XMLDecoder反序列化 getshell</title>
       <link href="/2021/11/12/lan-ling-oa-xmldecoder-fan-xu-lie-hua-getshell/"/>
       <url>/2021/11/12/lan-ling-oa-xmldecoder-fan-xu-lie-hua-getshell/</url>
@@ -22,7 +49,7 @@
             
             <tag> 蓝凌OA </tag>
             
-            <tag> XmlDecoder反序列化 </tag>
+            <tag> XMLDecoder反序列化 </tag>
             
         </tags>
       

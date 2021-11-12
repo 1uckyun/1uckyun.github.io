@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-11-12T07:57:24.668Z</updated>
+  <updated>2021-11-12T10:09:33.996Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>致远OA Fastjson RCE</title>
+    <link href="https://1uckyun.github.io/2021/11/12/zhi-yuan-oa-fastjson-rce/"/>
+    <id>https://1uckyun.github.io/2021/11/12/zhi-yuan-oa-fastjson-rce/</id>
+    <published>2021-11-12T08:27:11.000Z</published>
+    <updated>2021-11-12T10:09:33.996Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="RCE" scheme="https://1uckyun.github.io/tags/RCE/"/>
+    
+    <category term="致远OA" scheme="https://1uckyun.github.io/tags/%E8%87%B4%E8%BF%9COA/"/>
+    
+    <category term="Fastjson反序列化" scheme="https://1uckyun.github.io/tags/Fastjson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>蓝凌OA XMLDecoder反序列化 getshell</title>
     <link href="https://1uckyun.github.io/2021/11/12/lan-ling-oa-xmldecoder-fan-xu-lie-hua-getshell/"/>
     <id>https://1uckyun.github.io/2021/11/12/lan-ling-oa-xmldecoder-fan-xu-lie-hua-getshell/</id>
     <published>2021-11-12T06:34:12.000Z</published>
-    <updated>2021-11-12T07:57:24.668Z</updated>
+    <updated>2021-11-12T08:31:12.605Z</updated>
     
     
       
@@ -42,7 +72,7 @@
     
     <category term="蓝凌OA" scheme="https://1uckyun.github.io/tags/%E8%93%9D%E5%87%8COA/"/>
     
-    <category term="XmlDecoder反序列化" scheme="https://1uckyun.github.io/tags/XmlDecoder%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <category term="XMLDecoder反序列化" scheme="https://1uckyun.github.io/tags/XMLDecoder%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
     
   </entry>
   
