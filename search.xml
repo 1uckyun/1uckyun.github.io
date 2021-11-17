@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>BurpSuit对IOS进行抓包设置</title>
+      <link href="/2021/11/17/burpsuit-dui-ios-jin-xing-zhua-bao-she-zhi/"/>
+      <url>/2021/11/17/burpsuit-dui-ios-jin-xing-zhua-bao-she-zhi/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> IOS抓包 </tag>
+            
+            <tag> 移动安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>致远OA Fastjson RCE</title>
       <link href="/2021/11/12/zhi-yuan-oa-fastjson-rce/"/>
       <url>/2021/11/12/zhi-yuan-oa-fastjson-rce/</url>
