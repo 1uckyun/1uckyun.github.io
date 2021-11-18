@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-11-17T11:34:27.313Z</updated>
+  <updated>2021-11-18T00:53:42.737Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://1uckyun.github.io/2021/11/17/burpsuit-dui-ios-jin-xing-zhua-bao-she-zhi/"/>
     <id>https://1uckyun.github.io/2021/11/17/burpsuit-dui-ios-jin-xing-zhua-bao-she-zhi/</id>
     <published>2021-11-17T10:49:28.000Z</published>
-    <updated>2021-11-17T11:34:27.313Z</updated>
+    <updated>2021-11-18T00:53:42.737Z</updated>
     
     
       
@@ -153,9 +153,9 @@
     <category term="渗透测试学习" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
-    
     <category term="MySQL" scheme="https://1uckyun.github.io/tags/MySQL/"/>
+    
+    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
@@ -209,11 +209,11 @@
     <category term="渗透测试学习" scheme="https://1uckyun.github.io/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0/"/>
     
     
+    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
     <category term="SqlServer" scheme="https://1uckyun.github.io/tags/SqlServer/"/>
     
     <category term="MSSQL" scheme="https://1uckyun.github.io/tags/MSSQL/"/>
-    
-    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
     
   </entry>
   
@@ -296,7 +296,7 @@
     <link href="https://1uckyun.github.io/2021/10/22/xin-xi-an-quan-gong-cheng-shi-ruan-kao/"/>
     <id>https://1uckyun.github.io/2021/10/22/xin-xi-an-quan-gong-cheng-shi-ruan-kao/</id>
     <published>2021-10-22T08:42:38.000Z</published>
-    <updated>2021-11-03T10:03:43.709Z</updated>
+    <updated>2021-11-18T00:52:40.831Z</updated>
     
     
       
