@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-11-19T09:44:31.177Z</updated>
+  <updated>2021-11-19T09:58:16.974Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>孚盟云SQL注入</title>
+    <link href="https://1uckyun.github.io/2021/11/19/fu-meng-yun-sql-zhu-ru/"/>
+    <id>https://1uckyun.github.io/2021/11/19/fu-meng-yun-sql-zhu-ru/</id>
+    <published>2021-11-19T09:53:28.000Z</published>
+    <updated>2021-11-19T09:58:16.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="SQL注入" scheme="https://1uckyun.github.io/tags/SQL%E6%B3%A8%E5%85%A5/"/>
+    
+    <category term="孚盟云" scheme="https://1uckyun.github.io/tags/%E5%AD%9A%E7%9B%9F%E4%BA%91/"/>
+    
+  </entry>
   
   <entry>
     <title>常见弱口令汇总</title>
@@ -46,7 +74,7 @@
     <link href="https://1uckyun.github.io/2021/11/19/yi-sai-tong-dian-zi-wen-dang-guan-li-xi-tong-apache-solr-rce/"/>
     <id>https://1uckyun.github.io/2021/11/19/yi-sai-tong-dian-zi-wen-dang-guan-li-xi-tong-apache-solr-rce/</id>
     <published>2021-11-19T09:27:36.000Z</published>
-    <updated>2021-11-19T09:38:06.488Z</updated>
+    <updated>2021-11-19T09:58:59.054Z</updated>
     
     
       
@@ -529,34 +557,6 @@
     <category term="RCE" scheme="https://1uckyun.github.io/tags/RCE/"/>
     
     <category term="泛微OA" scheme="https://1uckyun.github.io/tags/%E6%B3%9B%E5%BE%AEOA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jetty 敏感信息泄露</title>
-    <link href="https://1uckyun.github.io/2021/10/15/jetty-min-gan-xin-xi-xie-lu/"/>
-    <id>https://1uckyun.github.io/2021/10/15/jetty-min-gan-xin-xi-xie-lu/</id>
-    <published>2021-10-15T01:20:49.000Z</published>
-    <updated>2021-10-15T06:24:37.398Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
-    
-    
-    <category term="Jetty" scheme="https://1uckyun.github.io/tags/Jetty/"/>
-    
-    <category term="敏感信息泄露" scheme="https://1uckyun.github.io/tags/%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2/"/>
     
   </entry>
   
