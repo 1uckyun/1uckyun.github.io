@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>常见弱口令汇总</title>
+      <link href="/2021/11/19/chang-jian-ruo-kou-ling-hui-zong/"/>
+      <url>/2021/11/19/chang-jian-ruo-kou-ling-hui-zong/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> WEB安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 弱口令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>亿赛通电子文档管理系统Apache Solr RCE</title>
       <link href="/2021/11/19/yi-sai-tong-dian-zi-wen-dang-guan-li-xi-tong-apache-solr-rce/"/>
       <url>/2021/11/19/yi-sai-tong-dian-zi-wen-dang-guan-li-xi-tong-apache-solr-rce/</url>
@@ -165,7 +188,7 @@
       
       <categories>
           
-          <category> 渗透测试学习 </category>
+          <category> WEB安全 </category>
           
       </categories>
       
@@ -215,7 +238,7 @@
       
       <categories>
           
-          <category> 渗透测试学习 </category>
+          <category> WEB安全 </category>
           
       </categories>
       
@@ -265,7 +288,7 @@
       
       <categories>
           
-          <category> 渗透测试学习 </category>
+          <category> WEB安全 </category>
           
       </categories>
       
@@ -390,7 +413,7 @@
       
       <categories>
           
-          <category> 信息安全 </category>
+          <category> WEB安全 </category>
           
       </categories>
       
@@ -515,7 +538,7 @@
       
       <categories>
           
-          <category> 信息安全 </category>
+          <category> WEB安全 </category>
           
       </categories>
       
