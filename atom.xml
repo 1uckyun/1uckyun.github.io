@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-11-22T06:02:05.782Z</updated>
+  <updated>2021-11-22T07:27:05.640Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Apache Druid 远程代码执行</title>
+    <link href="https://1uckyun.github.io/2021/11/22/apache-druid-yuan-cheng-dai-ma-zhi-xing/"/>
+    <id>https://1uckyun.github.io/2021/11/22/apache-druid-yuan-cheng-dai-ma-zhi-xing/</id>
+    <published>2021-11-22T07:12:54.000Z</published>
+    <updated>2021-11-22T07:27:05.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="Apache Druid" scheme="https://1uckyun.github.io/tags/Apache-Druid/"/>
+    
+    <category term="RCE" scheme="https://1uckyun.github.io/tags/RCE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Metabase geojson 任意文件读取</title>
     <link href="https://1uckyun.github.io/2021/11/22/metabase-geojson-ren-yi-wen-jian-du-qu/"/>
     <id>https://1uckyun.github.io/2021/11/22/metabase-geojson-ren-yi-wen-jian-du-qu/</id>
     <published>2021-11-22T05:58:11.000Z</published>
-    <updated>2021-11-22T06:02:05.782Z</updated>
+    <updated>2021-11-22T07:14:47.958Z</updated>
     
     
       
@@ -77,7 +105,7 @@
     <link href="https://1uckyun.github.io/2021/11/19/chang-jian-ruo-kou-ling-hui-zong/"/>
     <id>https://1uckyun.github.io/2021/11/19/chang-jian-ruo-kou-ling-hui-zong/</id>
     <published>2021-11-19T09:40:59.000Z</published>
-    <updated>2021-11-19T09:44:31.177Z</updated>
+    <updated>2021-11-22T06:07:02.015Z</updated>
     
     
       
@@ -529,34 +557,6 @@
     <category term="用友" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8B/"/>
     
     <category term="登录绕过" scheme="https://1uckyun.github.io/tags/%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用友NC servlet.FileReceiveServlet 任意文件上传</title>
-    <link href="https://1uckyun.github.io/2021/10/19/yong-you-nc-servlet-filereceiveservlet-ren-yi-wen-jian-shang-chuan/"/>
-    <id>https://1uckyun.github.io/2021/10/19/yong-you-nc-servlet-filereceiveservlet-ren-yi-wen-jian-shang-chuan/</id>
-    <published>2021-10-19T07:25:54.000Z</published>
-    <updated>2021-10-20T01:01:14.905Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
-    
-    
-    <category term="用友NC" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8BNC/"/>
-    
-    <category term="任意文件上传" scheme="https://1uckyun.github.io/tags/%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     
   </entry>
   

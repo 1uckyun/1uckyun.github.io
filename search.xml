@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Apache Druid 远程代码执行</title>
+      <link href="/2021/11/22/apache-druid-yuan-cheng-dai-ma-zhi-xing/"/>
+      <url>/2021/11/22/apache-druid-yuan-cheng-dai-ma-zhi-xing/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Apache Druid </tag>
+            
+            <tag> RCE </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Metabase geojson 任意文件读取</title>
       <link href="/2021/11/22/metabase-geojson-ren-yi-wen-jian-du-qu/"/>
       <url>/2021/11/22/metabase-geojson-ren-yi-wen-jian-du-qu/</url>
@@ -620,11 +645,11 @@
       
         <tags>
             
+            <tag> RCE </tag>
+            
             <tag> Apache </tag>
             
             <tag> 路径穿越 </tag>
-            
-            <tag> RCE </tag>
             
         </tags>
       
@@ -647,11 +672,11 @@
       
         <tags>
             
+            <tag> RCE </tag>
+            
             <tag> Apache </tag>
             
             <tag> 路径穿越 </tag>
-            
-            <tag> RCE </tag>
             
         </tags>
       
