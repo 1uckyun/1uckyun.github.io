@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Metabase geojson 任意文件读取</title>
+      <link href="/2021/11/22/metabase-geojson-ren-yi-wen-jian-du-qu/"/>
+      <url>/2021/11/22/metabase-geojson-ren-yi-wen-jian-du-qu/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 任意文件读取 </tag>
+            
+            <tag> Metabase </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>孚盟云SQL注入</title>
       <link href="/2021/11/19/fu-meng-yun-sql-zhu-ru/"/>
       <url>/2021/11/19/fu-meng-yun-sql-zhu-ru/</url>
