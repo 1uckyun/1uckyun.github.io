@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Apache ShenYu JWT认证缺陷漏洞</title>
+      <link href="/2021/11/23/apache-shenyu-jwt-ren-zheng-que-xian-lou-dong/"/>
+      <url>/2021/11/23/apache-shenyu-jwt-ren-zheng-que-xian-lou-dong/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Apache ShenYu </tag>
+            
+            <tag> JWT伪造 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MinIO未授权SSRF</title>
+      <link href="/2021/11/23/minio-wei-shou-quan-ssrf/"/>
+      <url>/2021/11/23/minio-wei-shou-quan-ssrf/</url>
+        <content type="html"><![CDATA[.文章内容太多 搜索会很卡 所以删掉了内容 默认只搜索标题.....]]></content>
+      
+      <categories>
+          
+          <category> 漏洞复现 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MinIO </tag>
+            
+            <tag> SSRF </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Apache Druid 远程代码执行</title>
       <link href="/2021/11/22/apache-druid-yuan-cheng-dai-ma-zhi-xing/"/>
       <url>/2021/11/22/apache-druid-yuan-cheng-dai-ma-zhi-xing/</url>
@@ -645,11 +695,11 @@
       
         <tags>
             
-            <tag> RCE </tag>
-            
             <tag> Apache </tag>
             
             <tag> 路径穿越 </tag>
+            
+            <tag> RCE </tag>
             
         </tags>
       
@@ -672,11 +722,11 @@
       
         <tags>
             
-            <tag> RCE </tag>
-            
             <tag> Apache </tag>
             
             <tag> 路径穿越 </tag>
+            
+            <tag> RCE </tag>
             
         </tags>
       

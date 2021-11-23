@@ -6,7 +6,7 @@
   <link href="https://1uckyun.github.io/atom.xml" rel="self"/>
   
   <link href="https://1uckyun.github.io/"/>
-  <updated>2021-11-22T07:27:05.640Z</updated>
+  <updated>2021-11-23T06:17:16.748Z</updated>
   <id>https://1uckyun.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Apache ShenYu JWT认证缺陷漏洞</title>
+    <link href="https://1uckyun.github.io/2021/11/23/apache-shenyu-jwt-ren-zheng-que-xian-lou-dong/"/>
+    <id>https://1uckyun.github.io/2021/11/23/apache-shenyu-jwt-ren-zheng-que-xian-lou-dong/</id>
+    <published>2021-11-23T06:03:04.000Z</published>
+    <updated>2021-11-23T06:17:16.748Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="Apache ShenYu" scheme="https://1uckyun.github.io/tags/Apache-ShenYu/"/>
+    
+    <category term="JWT伪造" scheme="https://1uckyun.github.io/tags/JWT%E4%BC%AA%E9%80%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MinIO未授权SSRF</title>
+    <link href="https://1uckyun.github.io/2021/11/23/minio-wei-shou-quan-ssrf/"/>
+    <id>https://1uckyun.github.io/2021/11/23/minio-wei-shou-quan-ssrf/</id>
+    <published>2021-11-23T01:20:12.000Z</published>
+    <updated>2021-11-23T01:28:50.300Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
+    
+    
+    <category term="MinIO" scheme="https://1uckyun.github.io/tags/MinIO/"/>
+    
+    <category term="SSRF" scheme="https://1uckyun.github.io/tags/SSRF/"/>
+    
+  </entry>
   
   <entry>
     <title>Apache Druid 远程代码执行</title>
@@ -508,55 +564,6 @@
     <category term="RCE" scheme="https://1uckyun.github.io/tags/RCE/"/>
     
     <category term="用友NC" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8BNC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用友NCCloud 目录遍历</title>
-    <link href="https://1uckyun.github.io/2021/10/20/yong-you-nccloud-mu-lu-bian-li/"/>
-    <id>https://1uckyun.github.io/2021/10/20/yong-you-nccloud-mu-lu-bian-li/</id>
-    <published>2021-10-20T00:55:04.000Z</published>
-    <updated>2021-10-20T01:36:21.607Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;声明&quot;&gt;&lt;a href=&quot;#声明&quot; class=&quot;headerlink&quot; title=&quot;声明&quot;&gt;&lt;/a&gt;声明&lt;/h2&gt;&lt;p&gt;由于传播、利用此文所提供的信息而造成的任何直接或者间接的后果及损失，均由使用者本人负责，文章作者不为此承担任何责任。&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="漏洞复现" scheme="https://1uckyun.github.io/categories/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"/>
-    
-    
-    <category term="用友NC" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8BNC/"/>
-    
-    <category term="目录遍历" scheme="https://1uckyun.github.io/tags/%E7%9B%AE%E5%BD%95%E9%81%8D%E5%8E%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用友某管理系统登录绕过</title>
-    <link href="https://1uckyun.github.io/2021/10/20/yong-you-xi-tong-deng-lu-rao-guo/"/>
-    <id>https://1uckyun.github.io/2021/10/20/yong-you-xi-tong-deng-lu-rao-guo/</id>
-    <published>2021-10-19T23:59:39.000Z</published>
-    <updated>2021-11-19T09:45:00.682Z</updated>
-    
-    
-    <summary type="html">暂不公开。</summary>
-    
-    
-    
-    <category term="WEB安全" scheme="https://1uckyun.github.io/categories/WEB%E5%AE%89%E5%85%A8/"/>
-    
-    
-    <category term="用友" scheme="https://1uckyun.github.io/tags/%E7%94%A8%E5%8F%8B/"/>
-    
-    <category term="登录绕过" scheme="https://1uckyun.github.io/tags/%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87/"/>
     
   </entry>
   
